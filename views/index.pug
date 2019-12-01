@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title='Frontend Examen'
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    // En produccion deben cargarse los recursos estaticos  via cdn
+    link(rel="preload", href="/javascripts/vendor/react.production.min.js", as="script", crossorigin )
+    link(rel="preload", href="/javascripts/vendor/react-dom.production.min.js", as="script", crossorigin)
+    link(rel="preload", href="/javascripts/main.js" as="script")
+   
+body
+  header
+    h1 
+      img(alt='Mercadolibre' )
+  |    
+  form(action="", method="get")
+    input(type="text")
+    input(type="submit", value="Buscar")
+  
+// script(crossorigin, src="/javascripts/vendor/react.production.min.js")
+// script(crossorigin, src="/javascripts/vendor/react-dom.production.min.js")
+// script(crossorigin, src="/javascripts/main.js")
+
