@@ -8,11 +8,12 @@ import createStore from './store/store'
 
 const main = (data) =>{
 
-
     window.__STATE__.page =1;
-    window.__STATE__.count =0;
+    window.__STATE__.range_items = [1,4];
+    window.__STATE__.items_per_page =4;
+    window.__STATE__.last_page =Math.ceil(__STATE__.items.length / window.__STATE__.items_per_page) ;
 
-
+    window.__STATE__.total = __STATE__.items.length;
 
     const store = createStore(window.__STATE__)
 

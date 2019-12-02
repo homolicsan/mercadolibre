@@ -4,26 +4,32 @@ import { connect } from 'unistore/preact'
 import { actions } from '../store/store'
 
 
-export const Pagination = connect(['count', 'author'], actions)(
+export const Pagination = connect(['page', 'range_items', 'items_per_page'], actions)(
 
-	({ count, author, increment, decrement }) => (
+	({ page, range_items, items_per_page, prev, next }) => (
 
 		<Fragment>
-			<div>{count}</div>
-			<div>{author.name}</div>
+			<div>Page: {page} -- </div>
+			<div>range_items  : {range_items}</div>
+			<div> items_per_page : {items_per_page} </div>
 	
 			<ul>
-				<li><button onClick={increment}> 1 </button></li>
+				<li><button onClick={prev}> Prev </button></li>
 
-				<li><button onClick={decrement}>2 </button> </li>
 
-				<li>1</li>
 
 				<li>1</li>
 
 				<li>1</li>
 
 				<li>1</li>
+
+				<li>1</li>
+
+
+
+				<li><button onClick={next}> Next </button> </li>
+
 			</ul>
 
 		</Fragment>
