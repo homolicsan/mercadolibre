@@ -1,20 +1,37 @@
 {
-  "name": "myapp",
-  "version": "0.0.0",
+  "name": "mercadolibre-examen",
+  "version": "0.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www --es-module-specifier-resolution=node",
+    "webpack": "node ./node_modules/webpack-cli/bin/cli.js --config webpack.config.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "decode-html": "^2.0.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "pug": "2.0.0-beta11",
+    "unistore": "^3.5.1"
   },
   "devDependencies": {
-    "react": "^16.12.0",
-    "webpack": "^4.41.2"
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-transform-react-jsx": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "babel-preset-react": "^6.24.1",
+    "compression": "^1.7.4",
+    "css-loader": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "preact": "^10.0.5",
+    "preact-render-to-string": "^5.1.1",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }

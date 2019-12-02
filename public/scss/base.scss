@@ -1,0 +1,11 @@
+@import '_vars';
+@import '_reset';
+@import '_grid';
+
+body {
+    background: $base-color;
+}
+
+.searchbox {
+    background: #fff; 
+}

@@ -1,0 +1,2 @@
+/* css */
+import './detail.scss';

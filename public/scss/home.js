@@ -1,0 +1,2 @@
+/* css */
+import './home.scss';

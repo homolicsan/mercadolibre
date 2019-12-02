@@ -1,0 +1,24 @@
+include mixins/all.pug
+doctype html
+html
+  head
+    title='Frontend Examen'
+    script
+      include ../public/javascripts/inline/main-result.js
+    
+    |
+    link(rel="preload", href="/javascripts/dist/main.js" as="script")
+    link(rel='stylesheet', href='/stylesheets/results.css')
+    link(rel="prefetch", href="/stylesheets/detail.css" as="style")
+    style
+      include ../public/stylesheets/base.css
+   
+body
+  header
+    h1 
+       +logo
+    +searchbox
+  
+div#app  
+
+script(src="/javascripts/dist/main.js",type="module")
