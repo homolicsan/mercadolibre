@@ -1,21 +1,32 @@
-import { h } from 'preact'
-import { connect } from 'unistore/preact'
-
-import { actions } from './store/store'
+import { h, Fragment, Component } from 'preact'
 
 import {Results} from './Results'
+import {Pagination} from './components/Pagination'
 
-export const App = connect('count', actions)(
-    ({ count, increment, decrement }) => (
-      <div>
-            <Results />
-            <div class="count">
-            <p>{count}</p>
-            <button class="increment-btn" onClick={increment}>Increment</button>
-            <button class="decrement-btn" onClick={decrement}>Decrement</button>
-        </div>
-      </div>
-     
-     
-    )
-  )
+export class App extends Component {
+
+  constructor() {
+    super();
+    //this.state = { time: '' };
+  }
+
+
+  // Lifecycle: Called whenever our component is created
+  componentDidMount() {
+   
+  }
+
+  // Lifecycle: Called just before our component will be destroyed
+  componentWillUnmount() {
+   
+  }
+
+  render(props, state) {
+    return (
+      <Fragment>
+        <Results />
+        <Pagination />    
+      </Fragment>
+    );
+  }
+}
