@@ -3,7 +3,11 @@ html
   head
     title='Frontend Examen'
     script.
-      (function(){
+      var ML = {
+          ajaxReady : false
+      };
+
+      (function(window){
         
         function ajax (url, callback, error) {
             var req = new XMLHttpRequest();
@@ -13,31 +17,26 @@ html
             req.onreadystatechange = function (aEvt) {
                   if (req.readyState == 4) {
                       if(req.status == 200){
-                        console.log(req.responseText);
-
                         callback(req.responseText)     
                       }
                       else{
                         error("Error loading page\n");
                       }
-                  
                   }
-              
               }
               req.send(null); 
         }
 
-
         ajax('http://localhost:3000/api/items?q=cars', function(data){
-
-            console.log(data);
-
+          ML.ajaxReady = true;
+          data = JSON.parse(data);
+          window.__STATE__ = data;
+          var event = new CustomEvent("ajaxReady", data);
+          document.dispatchEvent(event);
         })
 
-
-
-      })();
-      console.log( 'hola');
+      })(window);
+    
     |
     link(rel="preload", href="/javascripts/dist/main.js" as="script")
     link(rel='stylesheet', href='/stylesheets/style.css')
