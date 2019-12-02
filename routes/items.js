@@ -4,18 +4,22 @@ import pug from 'pug';
 
 // import serverSideRendering from '../helpers/server-side-rendering.jsx';
 
-
 const router = express.Router();
 
-
-
-const jsFunctionString = pug.renderFile('./views/items2.pug', {name: "fancyTemplateFun"});
+const jsFunctionString = pug.renderFile('./views/items-ssr.pug', {name: "fancyTemplateFun"});
 
 const htmlHeader = pug.renderFile('./views/modules/head.pug', {name: "fancyTemplateFun"});
 
 
+
 /* GET items listing. */
 router.get('/', function(req, res, next) {
+  res.render('items', {  });
+});
+
+
+/* GET items listing. */
+router.get('/ssr', function(req, res, next) {
 
   let timeout = 6000;  
   let query = req.query;
