@@ -10,14 +10,10 @@ html
    
 body
   header
-    h1 
-      img(alt='Mercadolibre' )
-  |   
-include modules/searchbox.pug
+    span
+      +logo
+  |
+  +searchbox
 
 | Hola
-  
-// script(crossorigin, src="/javascripts/vendor/react.production.min.js")
-// script(crossorigin, src="/javascripts/vendor/react-dom.production.min.js")
-// script(crossorigin, src="/javascripts/main.js")
-
+  h1 Titulo

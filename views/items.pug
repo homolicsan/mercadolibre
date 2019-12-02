@@ -1,3 +1,4 @@
+include mixins/all.pug
 doctype html
 html
   head
@@ -8,11 +9,12 @@ html
       };
 
       (function(window){
+        var urlParams = new URLSearchParams(window.location.search);
+        var query = urlParams.get('q');
         
         function ajax (url, callback, error) {
             var req = new XMLHttpRequest();
-            var query = '';
-            
+
             req.open('GET', url, true);
             req.onreadystatechange = function (aEvt) {
                   if (req.readyState == 4) {
@@ -27,7 +29,7 @@ html
               req.send(null); 
         }
 
-        ajax('http://localhost:3000/api/items?q=cars', function(data){
+        ajax('http://localhost:3000/api/items?q='+query, function(data){
           ML.ajaxReady = true;
           data = JSON.parse(data);
           window.__STATE__ = data;
@@ -48,18 +50,9 @@ html
 body
   header
     h1 
-      img(alt='Mercadolibre' )
-  |    
-  form(action="", method="get")
-    input(type="text")
-    input(type="submit", value="Buscar")
-
+       +logo
+    +searchbox
+  
 div#app  
 
-
 script(src="/javascripts/dist/main.js",type="module")
-  
-// script(crossorigin, src="/javascripts/vendor/react.production.min.js")
-// script(crossorigin, src="/javascripts/vendor/react-dom.production.min.js")
-// script(crossorigin, src="/javascripts/main.js")
-
