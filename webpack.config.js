@@ -1,6 +1,7 @@
 var path = require('path');
 
 module.exports = {
+    watch: true,
     mode: 'development',
     entry: './public/javascripts/apps/results/index.js',
     output: {
