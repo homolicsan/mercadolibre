@@ -4,7 +4,14 @@
 con una pegada a
 https://http2.mlstatic.com/resources/sites/MLA/autosuggest?showFilters=true&limit=6&api_version=2&q=ce
 
+# Estrategia
 
+ Los estáticos se cachean y gzipean
+Y en la home se hace una precarga de los css de la busqueda
+y en el listado de resultados se hace una precarga de los recuros del detail
+
+
+# Usar node 13
 
 # Branches
 - master: 
