@@ -5,10 +5,8 @@ html
     title='Frontend Examen'
     link(rel='stylesheet', href='/stylesheets/home.css')
     // En produccion deben cargarse los recursos estaticos  via cdn
-    link(rel=
-    "preload", href="/javascripts/vendor/react.production.min.js", as="script", crossorigin )
-    link(rel="preload", href="/javascripts/vendor/react-dom.production.min.js", as="script", crossorigin)
-    link(rel="preload", href="/javascripts/main.js" as="script")
+    link(rel="prefetch", href="/stylesheets/results.css" as="style")
+    link(rel="prefetch", href="/javascripts/dist/main.js" as="script")
     style
       include ../public/stylesheets/base.css
    
