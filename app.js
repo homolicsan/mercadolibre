@@ -3,22 +3,21 @@ import express  from 'express';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
+import compression  from 'compression';
 
 import indexRouter from './routes/index.js';
 import itemsRouter from './routes/items.js';
 import apiRouter from './routes/api.js';
-
-import expressStaticGzip  from 'express-static-gzip';
-
 
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-
 var app = express();
 
+// Gzip
+app.use(compression());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,6 +28,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(  path.join(__dirname, 'public'),  { maxage: 86400000 }   )  );
+
+
+
+
 
 app.use('/', indexRouter);
 app.use('/items', itemsRouter);
