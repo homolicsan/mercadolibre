@@ -48,4 +48,4 @@ const makeResponse = (data) => {
     return newResponse;
 };
 
-module.exports = makeResponse;
+export default makeResponse;

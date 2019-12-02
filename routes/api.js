@@ -1,9 +1,11 @@
-const express = require('express');
-const router = express.Router();
-const https = require('https');
+import express from 'express';
+import https from 'https';
+// TODO cambiar nombre 
+import responseMapping from '../helpers/items/responseMapping.js';
 
-// cambiar nombre 
-const responseMapping = require('../helpers/items/responseMapping.js');
+const  router = express.Router();
+
+
 
 /* GET items listing. */
 router.get('/items', (req, res, next) => {
@@ -52,5 +54,4 @@ router.get('/items/:id', function(req, res, next) {
 });
 
 
-
-module.exports = router;
+export default router;
