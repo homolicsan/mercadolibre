@@ -15,6 +15,18 @@ const main = (data) =>{
 
     window.__STATE__.total = __STATE__.items.length;
 
+
+    window.__STATE__.pages = [];
+
+    for (var i =1; i <=window.__STATE__.last_page; i++ ) {
+        window.__STATE__.pages.push( i);
+    }
+    
+
+    console.log(window.__STATE__.pages);
+
+
+
     const store = createStore(window.__STATE__)
 
     const app = document.getElementById('app')

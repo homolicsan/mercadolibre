@@ -28,7 +28,18 @@ export let actions = store => ({
             page : _page,
             range_items : make_range(_page, state.items_per_page)
         }
-    }
+    },
+
+    jumpTo(state, pageTo) {
+        let _page = pageTo;
+
+        return {
+            page : _page,
+            range_items : make_range(_page, state.items_per_page)
+        }
+    },
+
+    
 })
 
 export default initialState => createStore(initialState)
