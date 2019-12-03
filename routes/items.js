@@ -126,15 +126,7 @@ router.get('/:id', function(req, res, next) {
   let id = req.params.id
   let url = 'http://localhost:3000/api/items/' + id;
   
-  res.write('<head>');
-  res.write('<meta charset="utf-8">');
-  res.write('</head>');
-  res.write('<body>');
-  res.write('hola <br>');
-
-  res.write(pug.renderFile('./views/detail_header.pug'));
-
-  res.write('como estas 2 <br>');
+ 
 
   http.get(url, (resp) => {
     let data = '';
@@ -146,14 +138,14 @@ router.get('/:id', function(req, res, next) {
     // The whole response has been received. Print out the result.
     resp.on('end', () => {
 
-      res.write(pug.renderFile('./views/detail_body.pug', JSON.parse(data)));
-      res.end('</html>');
+      res.write(pug.renderFile('./views/detail.pug', JSON.parse(data)));
+      res.end();
 
     });
 
     }).on("error", (err) => {
 
-      res.end('</html>');
+      res.end();
        
     });
 
