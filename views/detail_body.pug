@@ -1,0 +1,12 @@
+include mixins/all.pug
+header
+    span
+    +logo
+    |
+    +searchbox
+
+main
+    h1 #{item.title}
+    p #{item.description}
+    img(src=item.picture)
+
