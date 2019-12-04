@@ -17,13 +17,12 @@ body
   header.header
     div.container
       div.row
-        h1.col-3.right
+        h1.col-1.offset-1
           +logo
         +searchbox
   
   div.container
     div.row
-      div.col-2
-      div#app.col-10
+      div#app.col-10.offset-2
 
 script(src="/javascripts/dist/main.js",type="module")

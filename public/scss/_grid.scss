@@ -172,6 +172,56 @@
     .hidden-sm {
       display: block;
     }
+
+    //Offset
+    .offset-1 {
+      padding-left: 4.33%;
+    }
+
+    .offset-2 {
+      padding-left: 12.66%;
+    }
+
+    .offset-3 {
+      padding-left: 21%;
+    }
+
+    .offset-4 {
+      padding-left: 29.33%;
+    }
+
+    .offset-5 {
+      padding-left: 37.66%;
+    }
+
+    .offset-6 {
+      padding-left: 46%;
+    }
+
+    .offset-7 {
+      padding-left: 54.33%;
+    }
+
+    .offset-8 {
+      padding-left: 62.66%;
+    }
+
+    .offset-9 {
+      padding-left: 71%;
+    }
+
+    .offset-10 {
+      padding-left: 79.33%;
+    }
+
+    .offset-11 {
+      padding-left: 87.66%;
+    }
+
+    .offset-12 {
+      padding-left: 96%;
+    }
+
   }
   
   @media only screen and (min-width: 60em) { /* 960px */
