@@ -5,7 +5,7 @@ import createStore from './store/store'
 
 const main = (data) => {
   // TODO: Esta feo esto
-  window.__STATE__.page =1;
+  window.__STATE__.current_page =1;
   window.__STATE__.range_items = [1,4];
   window.__STATE__.items_per_page =4;
   window.__STATE__.last_page = Math.ceil(__STATE__.items.length / window.__STATE__.items_per_page);
@@ -13,7 +13,7 @@ const main = (data) => {
   window.__STATE__.pages = [];
 
   for (var i =1; i <=window.__STATE__.last_page; i++ ) {
-    window.__STATE__.pages.push( i);
+    window.__STATE__.pages.push(i);
   }
 
   const store = createStore(window.__STATE__)

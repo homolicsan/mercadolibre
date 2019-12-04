@@ -1,10 +1,10 @@
 import createStore from 'unistore'
 
-const make_range = (page, items_per_page) => {
+const make_range = (current_page, items_per_page) => {
   let _range_items = [ ] ;
   let minus =  items_per_page - 1;
   
-  let last_item = page * items_per_page;
+  let last_item = current_page * items_per_page;
   let first_item = last_item - minus;
 
   _range_items.push(first_item);
@@ -15,27 +15,28 @@ const make_range = (page, items_per_page) => {
 
 export let actions = store => ({
   prev(state) {
-    let _page = (state.page > 1) ? state.page - 1 : 1;
+    let _current_page = (state.current_page > 1) ? state.current_page - 1 : 1;
 
-    return { page: _page,
-        range_items :  make_range(_page, state.items_per_page)
+    return { 
+      current_page: _current_page,
+      range_items :  make_range(_current_page, state.items_per_page)
     }
   },
   next(state) {
-    let _page = (state.page < state.last_page ) ? state.page + 1 : state.last_page;
+    let _current_page = (state.page < state.last_page ) ? state.page + 1 : state.last_page;
 
     return {
-        page : _page,
-        range_items : make_range(_page, state.items_per_page)
+      current_page : _current_page,
+      range_items : make_range(_current_page, state.items_per_page)
     }
   },
 
   jumpTo(state, pageTo) {
-    let _page = pageTo;
+    let _current_page = pageTo;
 
     return {
-        page : _page,
-        range_items : make_range(_page, state.items_per_page)
+      current_page : _current_page,
+      range_items : make_range(_current_page, state.items_per_page)
     }
   },
 

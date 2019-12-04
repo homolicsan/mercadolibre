@@ -81,31 +81,31 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./public/scss/detail.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./public/scss/results.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./public/scss/detail.js":
-/*!*******************************!*\
-  !*** ./public/scss/detail.js ***!
-  \*******************************/
+/***/ "./public/scss/results.js":
+/*!********************************!*\
+  !*** ./public/scss/results.js ***!
+  \********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _detail_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./detail.scss */ \"./public/scss/detail.scss\");\n/* harmony import */ var _detail_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_detail_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* css */\n\n\n\n//# sourceURL=webpack:///./public/scss/detail.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _results_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./results.scss */ \"./public/scss/results.scss\");\n/* harmony import */ var _results_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_results_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* css */\n\n\n\n//# sourceURL=webpack:///./public/scss/results.js?");
 
 /***/ }),
 
-/***/ "./public/scss/detail.scss":
-/*!*********************************!*\
-  !*** ./public/scss/detail.scss ***!
-  \*********************************/
+/***/ "./public/scss/results.scss":
+/*!**********************************!*\
+  !*** ./public/scss/results.scss ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./public/scss/detail.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./public/scss/results.scss?");
 
 /***/ })
 

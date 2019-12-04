@@ -4,8 +4,11 @@
 
 body {
   background: $background-color;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-
+a {
+  text-decoration: none;
+}
 // BEM Notation: http://getbem.com/
 
 .header{

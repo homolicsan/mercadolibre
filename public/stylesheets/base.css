@@ -198,7 +198,11 @@ table {
     max-width: 60rem; } }
 
 body {
-  background: #eeeeee; }
+  background: #eeeeee;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+a {
+  text-decoration: none; }
 
 .header {
   padding-top: 20px;
