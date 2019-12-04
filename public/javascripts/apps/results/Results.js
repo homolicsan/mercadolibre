@@ -1,9 +1,9 @@
-import {Item} from './components/Item'
 
 import { h, render, Component, Fragment } from 'preact';
 import { connect } from 'unistore/preact'
 
 import { actions } from './store/store'
+import {Item} from './components/Item'
 
 const showItemPerPage = (index, range_items) => {
   index = index + 1;
@@ -18,8 +18,6 @@ export const Results = connect(['items', 'range_items'], actions)(
       items.filter( (item, index)=> {
         return showItemPerPage(index, range_items)
       }).map(item => 
-      // Without a key, Preact has to guess which items have
-      // changed when re-rendering.
         <Fragment key={item.id}>
           <Item value={item} />
         </Fragment>
