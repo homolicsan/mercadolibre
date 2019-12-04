@@ -5,8 +5,8 @@ html
     title='Frontend Examen'
     script
       include ../public/javascripts/inline/main-result.js
-    
     |
+    link(rel='preconnect' href='http://mla-s1-p.mlstatic.com')
     link(rel='stylesheet', href='/stylesheets/results.css')
     link(rel="preload", href="/javascripts/dist/main.js" as="script")
     link(rel="prefetch", href="/stylesheets/detail.css" as="style")
@@ -23,6 +23,6 @@ body
   
   div.container
     div.row
-      div#app.col-10.offset-2
+      div#app.col-10.offset-1
 
 script(src="/javascripts/dist/main.js",type="module")

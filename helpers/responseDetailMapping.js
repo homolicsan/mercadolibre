@@ -1,15 +1,4 @@
-// TODO: duplicado
-const formatPrice = (price) => {
-  let result = {};
-
-  price = price.toString();
-  price = price.split('.');
-
-  result.amount = price.length ? parseInt(price[0]) : null;
-  result.decimals = price.length == 2? parseInt(price[1]) : 0;   
-
-  return result;
-}
+import format_price from './format-price.js';
 
 const responseDetailMapping = (data_item, data_item_detail) => {
   data_item = JSON.parse(data_item);
@@ -25,7 +14,7 @@ const responseDetailMapping = (data_item, data_item_detail) => {
   };
 
   if (data_item){
-    let price =  formatPrice(data_item.price) ;
+    let price =  format_price(data_item.price) ;
 
     new_response.item = {
       "id": data_item.id,

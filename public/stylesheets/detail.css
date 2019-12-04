@@ -1,3 +1,13 @@
 .detail {
-  background: #fff; }
+  background: #fff;
+  display: flex; }
+
+.detail__main-content {
+  order: 2; }
+
+.detail__image {
+  order: 1; }
+
+.detail__description {
+  color: red; }
 

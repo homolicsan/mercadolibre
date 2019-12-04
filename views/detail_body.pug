@@ -8,9 +8,11 @@ header.header
 
 main.container
   div.row
-    div.col-10.offset-2 
-      div
-        h1 #{item.title}
-        img(src=item.picture)
-      div
+    div.col-10.offset-1
+      div.detail
+        div.detail__main-content
+          h1 #{item.title}
+        
+        img.detail__image(src=item.picture)
+      div.detail__description
         p #{item.description}    

@@ -1,14 +1,5 @@
-const formatPrice = (price) => {
-    let result = {};
+import format_price from './format-price.js';
 
-    price = price.toString();
-    price = price.split('.');
-
-    result.amount = price.length ? parseInt(price[0]) : null;
-    result.decimals = price.length == 2 ? parseInt(price[1]) : 0;   
-
-    return result;
-}
 
 const make_response = (data) => {
     data = JSON.parse(data);
@@ -23,7 +14,7 @@ const make_response = (data) => {
 
     if (data && data.results){
       new_response.items = data.results.map((data) => {
-        let price =  formatPrice(data.price) ;
+        let price =  format_price(data.price) ;
 
         return {
           "id": data.id,
