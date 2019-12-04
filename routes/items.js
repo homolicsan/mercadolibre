@@ -15,7 +15,6 @@ router.get('/', function(req, res, next) {
   res.render('items', {  });
 });
 
-
 /* GET items listing. */
 router.get('/ssr', function(req, res, next) {
 
@@ -30,7 +29,6 @@ router.get('/ssr', function(req, res, next) {
   http.get(url, (resp) => {
     let data = '';
 
-
     // A chunk of data hasbeen recieved.
     resp.on('data', (chunk) => {
         data += chunk;
@@ -38,10 +36,7 @@ router.get('/ssr', function(req, res, next) {
 
     // The whole response has been received. Print out the result.
     resp.on('end', () => {
-
         finished = true;
-
-  
        // res.write( serverSideRendering( data) );
 
        // TODO no va tiene que ser sync
@@ -49,14 +44,11 @@ router.get('/ssr', function(req, res, next) {
         res.end('</html>');
       }, 2000)
       
-
     });
 
     }).on("error", (err) => {
        
     });
-
-
 
   res.write('<head>');
   res.write(htmlHeader);
@@ -67,21 +59,11 @@ router.get('/ssr', function(req, res, next) {
   res.write('hola <br>');
 
 
-
-
   res.write('como estas 2 <br>');
-
   res.write(jsFunctionString);
-
-
-
   //const a = pug.renderFile('items2.pug', { title: 'Express' });
 
-  
-
   setTimeout( () => {
-
-   
     res.write('como estas 3<br>');
     res.write('');
 
@@ -103,8 +85,6 @@ router.get('/ssr', function(req, res, next) {
         </script>
       `);
 
-      
-
       res.end('</html>');
     }
 
@@ -112,17 +92,12 @@ router.get('/ssr', function(req, res, next) {
 
 
 */
-
   
   // res.render('items', { });
-
-
 });
-
 
 // Detail como chunk
 router.get('/:id', function(req, res, next) {
-
   let id = req.params.id
   let url = 'http://localhost:3000/api/items/' + id;
 

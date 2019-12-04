@@ -24,7 +24,5 @@ export const Results = connect(['items', 'range_items'], actions)(
           <Item value={item} />
         </Fragment>
     )
-    
-
 	)
 )

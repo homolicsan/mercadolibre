@@ -24,9 +24,9 @@ export const Pagination = connect(['page', 'total', 'last_page'], actions)(
 			<div>Página: {page} de {last_page} </div>
 			
 			<ul class='paginator'>
-				<li><a  class='paginator__page'onClick={prev}> Prev </a></li>
+				<li><a  class='paginator__page'onClick={prev}> Anterior</a></li>
 				<Pages />
-				<li><a class='paginator__page' onClick={next}> Next </a></li>
+				<li><a class='paginator__page' onClick={next}> Siguiente </a></li>
 			</ul>
 
 		</Fragment>

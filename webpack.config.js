@@ -47,7 +47,6 @@ let sassConfigDetail = Object.assign({}, sassConfig, {
   ]
 });
 
-
 let sassConfigResult = Object.assign({}, sassConfig, {
   entry: './public/scss/results.js',
   plugins: [
