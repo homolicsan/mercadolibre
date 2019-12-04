@@ -1,5 +1,28 @@
 @import '_vars';
 
-.results__item {
-    background: #fff; 
+.result-item {
+  background: #fff; 
 }
+  .result-item__main-content{
+    
+  }
+
+  .result-item__image {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+// Paginator
+.paginator {
+  display: flex;
+  flex-direction: row;
+}
+  .paginator__page {
+    background: #ccc;
+    color: #3483fa;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+  }

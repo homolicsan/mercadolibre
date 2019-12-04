@@ -3,27 +3,30 @@ import { connect } from 'unistore/preact'
 
 import { actions } from '../store/store'
 
+ 
+/** Pages Component */
+const Pages = connect(['current_page', 'pages'], actions)(
+	({ current_page, pages,  prev, next, jumpTo }) => (
 
-export const Pagination = connect(['count', 'author'], actions)(
+		pages.map((item, index) =>
+			<Fragment key={index} >
+			<li><a class='paginator__page' onClick={() => jumpTo(item)} > {item} </a></li>
+			</Fragment>
+		)
+	)
+)
 
-	({ count, author, increment, decrement }) => (
-
-		<Fragment>
-			<div>{count}</div>
-			<div>{author.name}</div>
-	
-			<ul>
-				<li><button onClick={increment}> 1 </button></li>
-
-				<li><button onClick={decrement}>2 </button> </li>
-
-				<li>1</li>
-
-				<li>1</li>
-
-				<li>1</li>
-
-				<li>1</li>
+/** Pagination Component */
+export const Pagination = connect(['current_page', 'total', 'last_page'], actions)(
+	({ current_page, total, last_page,  prev, next, jumpTo }) => (
+		 <Fragment>
+			 <div>{total} resultados</div>
+			<div>Página: {current_page} de {last_page} </div>
+			
+			<ul class='paginator'>
+				<li><a  class='paginator__page'onClick={prev}> Anterior</a></li>
+				<Pages />
+				<li><a class='paginator__page' onClick={next}> Siguiente</a></li>
 			</ul>
 
 		</Fragment>

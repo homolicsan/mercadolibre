@@ -2,50 +2,50 @@ const formatPrice = (price) => {
     let result = {};
 
     price = price.toString();
-
     price = price.split('.');
 
     result.amount = price.length ? parseInt(price[0]) : null;
-    result.decimals = price.length == 2? parseInt(price[1]) : 0;   
+    result.decimals = price.length == 2 ? parseInt(price[1]) : 0;   
 
     return result;
 }
 
-const makeResponse = (data) => {
-
+const make_response = (data) => {
     data = JSON.parse(data);
 
-    let newResponse = {
-        author: {
-            name: "Iván",
-            lastname: "Homolicsan"
-        },
-        categories: ["Categoria 1", "Sub categoria 2", "Subcategoria 3"] 
+    let new_response = {
+      author: {
+        name: "Iván",
+        lastname: "Homolicsan"
+      },
+      categories: ["Categoria 1", "Sub categoria 2", "Subcategoria 3"] 
     };
 
     if (data && data.results){
-        newResponse.items = data.results.map((data)=>{
+      new_response.items = data.results.map((data) => {
+        let price =  formatPrice(data.price) ;
 
-            let price =  formatPrice(data.price) ;
+        return {
+          "id": data.id,
+          "title": data.title,
+          "price": {
+              "currency": data.currency_id,
+              "amount": price.amount,
+              "decimals": price.decimals
+          },
+          "picture": data.thumbnail.replace('I.jpg','X.webp'),
+          "condition": data.condition,
+          "free_shipping": data.shipping.free_shipping,
 
-            return {
-                "id": data.id,
-                "title": data.title,
-                "price": {
-                    "currency": data.currency_id,
-                    "amount": price.amount,
-                    "decimals": price.decimals
-                },
-                "picture": data.thumbnail,
-                "condition": data.condition,
-                "free_shipping": data.shipping.free_shipping 
-            };
 
-        }); 
+          // No estaba pedida en la respuesta de la api pero si en la maqueta
+          "location": data.seller_address.state.name
+        };
+
+      }); 
     }
 
-
-    return newResponse;
+  return new_response;
 };
 
-export default makeResponse;
+export default make_response;

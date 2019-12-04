@@ -2,16 +2,20 @@ include mixins/all.pug
 doctype html
 html
   head
+    meta(charset='utf-8')
     title='Frontend Examen'
     link(rel='stylesheet', href='/stylesheets/home.css')
     // En produccion deben cargarse los recursos estaticos  via cdn
     link(rel="prefetch", href="/stylesheets/results.css" as="style")
+    link(rel="prefetch", href="/stylesheets/base.css" as="style")
     link(rel="prefetch", href="/javascripts/dist/main.js" as="script")
     style
       include ../public/stylesheets/base.css
    
 body
-  header
-    h1 
-      +logo
-    +searchbox
+  header.header
+    div.container
+      div.row
+        h1.col-1.offset-1
+          +logo
+        +searchbox

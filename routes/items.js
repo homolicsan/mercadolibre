@@ -10,13 +10,10 @@ const jsFunctionString = pug.renderFile('./views/items-ssr.pug', {name: "fancyTe
 
 const htmlHeader = pug.renderFile('./views/modules/head.pug', {name: "fancyTemplateFun"});
 
-
-
 /* GET items listing. */
 router.get('/', function(req, res, next) {
   res.render('items', {  });
 });
-
 
 /* GET items listing. */
 router.get('/ssr', function(req, res, next) {
@@ -32,7 +29,6 @@ router.get('/ssr', function(req, res, next) {
   http.get(url, (resp) => {
     let data = '';
 
-
     // A chunk of data hasbeen recieved.
     resp.on('data', (chunk) => {
         data += chunk;
@@ -40,10 +36,7 @@ router.get('/ssr', function(req, res, next) {
 
     // The whole response has been received. Print out the result.
     resp.on('end', () => {
-
         finished = true;
-
-  
        // res.write( serverSideRendering( data) );
 
        // TODO no va tiene que ser sync
@@ -51,14 +44,11 @@ router.get('/ssr', function(req, res, next) {
         res.end('</html>');
       }, 2000)
       
-
     });
 
     }).on("error", (err) => {
        
     });
-
-
 
   res.write('<head>');
   res.write(htmlHeader);
@@ -69,21 +59,11 @@ router.get('/ssr', function(req, res, next) {
   res.write('hola <br>');
 
 
-
-
   res.write('como estas 2 <br>');
-
   res.write(jsFunctionString);
-
-
-
   //const a = pug.renderFile('items2.pug', { title: 'Express' });
 
-  
-
   setTimeout( () => {
-
-   
     res.write('como estas 3<br>');
     res.write('');
 
@@ -105,8 +85,6 @@ router.get('/ssr', function(req, res, next) {
         </script>
       `);
 
-      
-
       res.end('</html>');
     }
 
@@ -114,15 +92,50 @@ router.get('/ssr', function(req, res, next) {
 
 
 */
-
   
   // res.render('items', { });
-
-
 });
 
+// Detail como chunk
 router.get('/:id', function(req, res, next) {
-  res.render('itemDetail', {  });
+  let id = req.params.id
+  let url = 'http://localhost:3000/api/items/' + id;
+
+  res.write(`
+    <!DOCTYPE html>
+    <html><head><meta charset="utf-8">
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/detail.css">
+`)
+
+  http.get(url, (resp) => {
+    let data = '';
+    // A chunk of data hasbeen recieved.
+    resp.on('data', (chunk) => {
+        data += chunk;
+    });
+
+    // The whole response has been received. Print out the result.
+    resp.on('end', () => {
+
+      data = JSON.parse(data);
+
+      res.write(`<title>${data.item.title}</title>
+      </head>
+      <body>`)
+
+      res.write(pug.renderFile('./views/detail_body.pug', data));
+      res.end('</body></html>');
+
+    });
+
+    }).on("error", (err) => {
+
+      res.end();
+       
+    });
+
+
 });
 
 export default router;

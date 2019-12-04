@@ -9,8 +9,6 @@ export class App extends Component {
     super();
     //this.state = { time: '' };
   }
-
-
   // Lifecycle: Called whenever our component is created
   componentDidMount() {
    

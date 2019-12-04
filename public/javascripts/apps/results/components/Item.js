@@ -1,10 +1,18 @@
 import { h, render, Component } from 'preact';
 
-export const Item = (props) => (
-	<article>
+export const Item = (props) => {
+	let link ='/items/' + props.value.id;
 
-		<h2>{props.value.title}</h2>
-		<span> precio: {props.value.price.amount} </span>
-		<img src={props.value.picture} />
-	</article>
-)
+	return (
+    <article class='result-item'>
+      <div class='result-item__main-content'>
+        <h2 class='result-item__title'>
+          <a href={link}>{props.value.title}</a>
+          </h2>
+        <span> precio: {props.value.price.amount} </span>
+        <span class='result-item__location'> {props.value.location} </span>
+      </div>
+      <img src={props.value.picture} class='result-item__image' />
+      
+    </article>)
+}

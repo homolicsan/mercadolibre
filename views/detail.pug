@@ -1,13 +1,11 @@
+include mixins/all.pug
 doctype html
 html
   head
-    title='Frontend Examen'
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    // En produccion deben cargarse los recursos estaticos  via cdn
-    link(rel="preload", href="/javascripts/vendor/react.production.min.js", as="script", crossorigin )
-    link(rel="preload", href="/javascripts/vendor/react-dom.production.min.js", as="script", crossorigin)
-    link(rel="preload", href="/javascripts/main.js" as="script")
-   
+    meta(charset='utf-8')
+    title #{item.title}
+    link(rel='stylesheet', href='/stylesheets/base.css')
+  
 body
   header
     span
@@ -15,5 +13,7 @@ body
   |
   +searchbox
 
-| Hola
-  h1 Titulo
+  main
+    h1 #{item.title}
+    p #{item.description}
+    img(src=item.picture)
