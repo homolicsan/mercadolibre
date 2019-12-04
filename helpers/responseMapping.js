@@ -1,6 +1,5 @@
 import format_price from './format-price.js';
 
-
 const make_response = (data) => {
     data = JSON.parse(data);
 
@@ -14,7 +13,7 @@ const make_response = (data) => {
 
     if (data && data.results){
       new_response.items = data.results.map((data) => {
-        let price =  format_price(data.price) ;
+        let price =  format_price(data.price, data.currency_id);
 
         return {
           "id": data.id,
@@ -22,7 +21,9 @@ const make_response = (data) => {
           "price": {
               "currency": data.currency_id,
               "amount": price.amount,
-              "decimals": price.decimals
+              "decimals": price.decimals,
+
+              "amount_formated": price.amount_formated // No estaba pedido pero decidi hacerlo en el servidor para no perder tiempo de proceso en el cliente
           },
           "picture": data.thumbnail.replace('I.jpg','X.webp'),
           "condition": data.condition,

@@ -14,7 +14,7 @@ const responseDetailMapping = (data_item, data_item_detail) => {
   };
 
   if (data_item){
-    let price =  format_price(data_item.price) ;
+    let price = format_price(data_item.price, data_item.currency_id);
 
     new_response.item = {
       "id": data_item.id,
@@ -22,7 +22,9 @@ const responseDetailMapping = (data_item, data_item_detail) => {
       "price": {
         "currency": data_item.currency_id,
         "amount": price.amount,
-        "decimals": price.decimals
+        "decimals": price.decimals,
+
+        "amount_formated": price.amount_formated // No estaba pedido pero decidi hacerlo en el servidor para no perder tiempo de proceso en el cliente
       },
       "picture": data_item.pictures[0].url,
       "condition": data_item.condition,
