@@ -10,7 +10,7 @@ export const Item = (props) => {
           <a href={link}>{props.value.title}</a>
           </h2>
         <span> precio: {props.value.price.amount} </span>
-        <span class='result-item__location'> location </span>
+        <span class='result-item__location'> {props.value.location} </span>
       </div>
       <img src={props.value.picture} class='result-item__image' />
       

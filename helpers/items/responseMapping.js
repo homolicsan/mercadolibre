@@ -35,7 +35,11 @@ const make_response = (data) => {
           },
           "picture": data.thumbnail.replace('I.jpg','X.webp'),
           "condition": data.condition,
-          "free_shipping": data.shipping.free_shipping 
+          "free_shipping": data.shipping.free_shipping,
+
+
+          // No estaba pedida en la respuesta de la api pero si en la maqueta
+          "location": data.seller_address.state.name
         };
 
       }); 
