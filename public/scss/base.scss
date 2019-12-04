@@ -5,6 +5,9 @@
 body {
   background: $background-color;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  // Se agrega scroll vertical para cuando pasemos a una pagina con scroll no se produzca un cambio visual desagradable
+  // con los elementos
+  overflow-y: scroll; 
 }
 a {
   text-decoration: none;
@@ -20,7 +23,7 @@ a {
   background: url('/images/Logo_ML.png');
   width: 54px;
   height: 36px;
-  text-indent: 2000px;
+  text-indent: -2000px;
   display: inline-block;
 }
 
