@@ -1,12 +1,21 @@
 include mixins/all.pug
-header
-    span
-    +logo
-    |
-    +searchbox
+header.header
+    div.container
+      div.row
+        span.col-3.right
+          +logo
+        +searchbox
 
-main
-    h1 #{item.title}
-    p #{item.description}
-    img(src=item.picture)
+main.container
+      div.row
+        div.col-2
+        div.col-10  
+            div
+                h1 #{item.title}
+                
+                img(src=item.picture)
+            div
+                p #{item.description}    
+
+
 

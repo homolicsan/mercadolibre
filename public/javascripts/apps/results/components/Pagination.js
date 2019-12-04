@@ -10,24 +10,23 @@ const Pages = connect(['pages'], actions)(
 
 		pages.map((item, index) =>
 			<Fragment key={index} >
-			<li><button  onClick={() => jumpTo(item)} > {item} </button></li>
+			<li><a class='paginator__page' onClick={() => jumpTo(item)} > {item} </a></li>
 			</Fragment>
 		)
 	)
 )
 
 /** Pagination Component */
-export const Pagination = connect(['page', 'range_items', 'items_per_page'], actions)(
-	({ page, range_items, items_per_page,  prev, next, jumpTo }) => (
+export const Pagination = connect(['page', 'total', 'last_page'], actions)(
+	({ page, total, last_page,  prev, next, jumpTo }) => (
 		 <Fragment>
-			<div>Page: {page} -- </div>
-			<div>range_itemsdfd  : {range_items}</div>
-			<div> items_per_page : {items_per_page} </div>
-	
-			<ul>
-				<li><button onClick={prev}> Prev </button></li>
+			 <div>{total} resultados</div>
+			<div>Página: {page} de {last_page} </div>
+			
+			<ul class='paginator'>
+				<li><a  class='paginator__page'onClick={prev}> Prev </a></li>
 				<Pages />
-				<li><button onClick={next}> Next </button></li>
+				<li><a class='paginator__page' onClick={next}> Next </a></li>
 			</ul>
 
 		</Fragment>

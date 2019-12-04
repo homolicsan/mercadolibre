@@ -109,8 +109,4 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./publ
 
 /***/ })
 
-/******/ });ic/scss/results.scss?");
-
-/***/ })
-
 /******/ });

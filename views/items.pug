@@ -7,18 +7,23 @@ html
       include ../public/javascripts/inline/main-result.js
     
     |
-    link(rel="preload", href="/javascripts/dist/main.js" as="script")
     link(rel='stylesheet', href='/stylesheets/results.css')
+    link(rel="preload", href="/javascripts/dist/main.js" as="script")
     link(rel="prefetch", href="/stylesheets/detail.css" as="style")
     style
       include ../public/stylesheets/base.css
    
 body
-  header
-    h1 
-       +logo
-    +searchbox
+  header.header
+    div.container
+      div.row
+        h1.col-3.right
+          +logo
+        +searchbox
   
-div#app  
+  div.container
+    div.row
+      div.col-2
+      div#app.col-10
 
 script(src="/javascripts/dist/main.js",type="module")

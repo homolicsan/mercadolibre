@@ -3,9 +3,34 @@
 @import '_grid';
 
 body {
-    background: $base-color;
+    background: $background-color;
 }
 
-.searchbox {
-    background: #fff; 
+// BEM Notation: http://getbem.com/
+
+.header{
+    padding-top: 20px;
+    background: $main-color;
 }
+
+.logo {
+    background: url('/images/Logo_ML.png');
+    width: 54px;
+    height: 36px;
+    text-indent: 2000px;
+    display: inline-block;
+}
+
+/* */
+.searchbox {
+    background: #fff;
+    display: inline-block;
+}
+
+    .searchbox__input {
+        width: 78%;
+    }
+
+    .searchbox__submit {
+        width: 20%;
+    }

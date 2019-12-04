@@ -13,7 +13,9 @@ html
       include ../public/stylesheets/base.css
    
 body
-  header
-    h1 
-      +logo
-    +searchbox
+  header.header
+    div.container
+      div.row
+        h1.col-3.right
+          +logo
+        +searchbox

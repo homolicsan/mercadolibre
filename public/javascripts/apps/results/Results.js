@@ -21,7 +21,6 @@ export const Results = connect(['items', 'range_items'], actions)(
       // Without a key, Preact has to guess which items have
       // changed when re-rendering.
         <Fragment key={item.id}>
-          <div>aaa {range_items}</div>
           <Item value={item} />
         </Fragment>
     )
