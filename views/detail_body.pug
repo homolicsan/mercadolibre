@@ -12,6 +12,7 @@ main.container
       div.detail
         div.detail__main-content
           h1 #{item.title}
+          span.detail__price #{item.price.amount_formated}
         
         img.detail__image(src=item.picture)
       div.detail__description

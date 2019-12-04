@@ -1,15 +1,41 @@
+.result-breadcrumb {
+  font-size: 14px;
+  padding: 16px 0; }
+
 .result-item {
-  display: flex; }
+  display: flex;
+  padding: 16px 0 16px 16px; }
 
 .result-item__main-content {
-  order: 2; }
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  width: 290px; }
+
+.result-item__price {
+  order: 1;
+  font-size: 24px;
+  padding-bottom: 32px;
+  color: #333333; }
+
+.result-item__title {
+  order: 2;
+  font-size: 18px; }
+  .result-item__title a {
+    color: #666666; }
 
 .result-item__image {
   order: 1;
   width: 180px;
   height: 180px;
   border-radius: 4px;
-  box-sizing: border-box; }
+  margin-right: 16px; }
+
+.result-item__location {
+  order: 3;
+  font-size: 12px;
+  padding-top: 24px;
+  color: #999999; }
 
 .paginator {
   display: flex;
@@ -21,4 +47,11 @@
   padding: 5px;
   border-radius: 4px;
   cursor: pointer; }
+
+/*
+  #333333
+  #666666
+  #999999
+  #eeeeee
+  */
 

@@ -1,13 +1,27 @@
 .detail {
-  background: #fff;
   display: flex; }
 
 .detail__main-content {
   order: 2; }
 
 .detail__image {
-  order: 1; }
+  order: 1;
+  width: 680px; }
+
+.detail__description-title {
+  color: #333333;
+  font-size: 24px; }
+
+.detail__price {
+  color: #333333;
+  font-size: 46px; }
 
 .detail__description {
-  color: red; }
+  color: #999999;
+  font-size: 16px; }
+
+.detail__call-to-action {
+  background: #3483fa;
+  color: #fff;
+  width: 200px; }
 
