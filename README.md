@@ -24,29 +24,23 @@ y en resultados del detalle
 ---
 ## HTMLs legibles
 Nuevo Usuario
-[Index](/entrega/htmls/nuevo_usuario/index.html)
-
-[Results](/entrega/htmls/nuevo_usuario/results.html)
-
-[Details](/entrega/htmls/nuevo_usuario/detail.html)
+- [Index](/entrega/htmls/nuevo_usuario/index.html)
+- [Results](/entrega/htmls/nuevo_usuario/results.html)
+- [Details](/entrega/htmls/nuevo_usuario/detail.html)
 
 Usuario Recurrente
-[Index](/entrega/htmls/usuario_recurrente/index.html)
-
-[Results](/entrega/htmls/usuario_recurrente/results.html)
-
-[Details](/entrega/htmls/usuario_recurrente/detail.html)
+- [Index](/entrega/htmls/usuario_recurrente/index.html)
+- [Results](/entrega/htmls/usuario_recurrente/results.html)
+- [Details](/entrega/htmls/usuario_recurrente/detail.html)
 
 ---
 ## Lighthouse Audits
 
 Reportes de lighthouse:
 
-[Index](/entrega/lighthouse/pdfs/index.pdf)
-
-[Results](/entrega/lighthouse/pdfs/results.pdf)
-
-[Details](/entrega/lighthouse/pdfs/details.pdf)
+- [Index](/entrega/lighthouse/pdfs/index.pdf)
+- [Results](/entrega/lighthouse/pdfs/results.pdf)
+- [Details](/entrega/lighthouse/pdfs/details.pdf)
 
 ### Capturas
 #### Index
@@ -64,4 +58,3 @@ Reportes de lighthouse:
 - build por contenido
 - Server Side Rendering
 - preact como dependencia, sacar del build
-
