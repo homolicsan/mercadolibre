@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mercadolibre | Resultados</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mercadolibre descripcion, keyword1 keyword2 keyword3">
+    <script src="/javascripts/inline/main-result.js"></script>
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/results.css" media="(min-width: 40em)">
+    <script>
+        var ML = {
+            ajaxReady: false
+        };
+    </script>
+    <link rel="preconnect" href="http://mla-s1-p.mlstatic.com">
+    <link rel="preload" href="/javascripts/dist/results.js" as="script">
+    <link rel="preload" href="/javascripts/dist/searchbox.js" as="script">
+    <link rel="prefetch" href="/stylesheets/detail.css" as="style">
+    <style>
+        /* Breadcrumb*/
+        
+        .breadcrumb {
+            padding: 16px 0;
+        }
+        
+        .breadcrumb__item {
+            display: inline-block;
+            font-size: 14px;
+            color: #999999;
+        }
+        
+        .breadcrumb__item a {
+            color: #999999;
+        }
+        
+        .breadcrumb__item:before {
+            content: '>';
+            padding: 0 6px;
+        }
+        
+        .breadcrumb__item:first-child:before {
+            content: ' ';
+            padding: 0;
+        }
+        
+        .paginator__page_link {
+            min-width: 35px;
+            height: 35px;
+            box-sizing: border-box;
+            padding: 10px;
+            vertical-align: middle;
+            text-align: center;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+</html>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <h1 class="col-1 offset-1"><a class="logo" href="/">Mercadolibre</a></h1>
+                <div id="searchbox">
+                    <form class="col-9 searchbox" action="/items" method="get">
+                        <label class="searchbox__label" for="q">buscar</label>
+                        <input class="searchbox__input" type="text" name="q" id="q" placeholder="Nunca dejes de buscar" autocomplete="off" />
+                        <input class="searchbox__submit" type="submit" value="Buscar" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div id="app"></div>
+    </div>
+    <script src="/javascripts/dist/searchbox.js" type="module"></script>
+    <script src="/javascripts/dist/results.js" type="module"></script>
+</body>
