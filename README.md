@@ -17,21 +17,30 @@ Si el usuario ingresa por primera vez, se sirven ciertos recuros embebidos y se 
 en la home se cargan los recursos criticos de resultados
 y en resultados del detalle
 
-## Se utilizo
+## En desarollo
 - BEM Notation para el maquetado  http://getbem.com/
 - PReact en vez de React para que las apps sean livianas
 
-## Mejoras posible de la entrega
-- CSS: generar compatibilidad de propiedades con autoprefix 
-- build por contenido
-- Server Side Rendering
-- preact como dependencia, sacar del build
+---
+## HTMLs legibles
+Nuevo Usuario
+[Index](/entrega/htmls/nuevo_usuario/index.html)
+
+[Results](/entrega/htmls/nuevo_usuario/results.html)
+
+[Details](/entrega/htmls/nuevo_usuario/detail.html)
+
+Usuario Recurrente
+[Index](/entrega/htmls/usuario_recurrente/index.html)
+
+[Results](/entrega/htmls/usuario_recurrente/results.html)
+
+[Details](/entrega/htmls/usuario_recurrente/detail.html)
 
 ---
-
 ## Lighthouse Audits
 
-reportes de lighthouse:
+Reportes de lighthouse:
 
 [Index](/entrega/lighthouse/pdfs/index.pdf)
 
@@ -48,3 +57,11 @@ reportes de lighthouse:
 
 #### Details
 ![Details](/entrega/lighthouse/images/detail.png)
+
+
+## Mejoras posible de la entrega
+- CSS: generar compatibilidad de propiedades con autoprefix 
+- build por contenido
+- Server Side Rendering
+- preact como dependencia, sacar del build
+
