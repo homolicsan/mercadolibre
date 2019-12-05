@@ -28,7 +28,7 @@ Y en la home se hace una prefech de los css y js del resultado de busqueda
 - Server Side Rendering
 - preact como dependencia, sacar del build
 
-====
+---
 
 ## Lighthouse Audits
 
