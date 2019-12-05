@@ -12,7 +12,7 @@ https://http2.mlstatic.com/resources/sites/MLA/autosuggest?showFilters=true&limi
 ## Cómo Levantar la app
 
 `` 
-  npm install
+  npm install \n
   npm run start
 ``
 ## Estrategia
@@ -33,10 +33,18 @@ Y en la home se hace una prefech de los css y js del resultado de busqueda
 
 ## Lighthouse Audits
 
-- En la carpeta entrega/liglighthouse/pdfs se encuentran los reportes de lighthouse
+- reportes de lighthouse pdf
 
-[Index](/entrega/lighthouse/images/index.png)
+[Index](/entrega/lighthouse/pdfs/index.png)
 
-[Results](/entrega/lighthouse/images/results.png)
+[Results](/entrega/lighthouse/pdfs/results.png)
 
-[Details](/entrega/lighthouse/images/details.png)
+[Details](/entrega/lighthouse/pdfs/details.pdf)
+
+### Captures
+
+![Index](/entrega/lighthouse/images/index.png)
+
+![Results](/entrega/lighthouse/images/results.png)
+
+![Details](/entrega/lighthouse/images/details.png)
