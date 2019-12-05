@@ -9,13 +9,24 @@ header.header
 main.container
   div.row
     div.col-10.offset-1
+      ul.breadcrumb
+        li.breadcrumb__item
+          a Categoria 1
+        li.breadcrumb__item
+          a Categoria 2
+        li.breadcrumb__item
+          a Categoria 3    
+      
+  div.row
+    div.col-11.offset-1
       div.detail
         div.detail__main-content
-          h1 #{item.title}
+          span.detail__seller-info Nuevo - 234 vendidos
+          h1.detail__title #{item.title}
           span.detail__price #{item.price.amount_formated}
-          a.detail__call-to-action Comprar
+          a.detail__call-to-action(role='button') Comprar
         
         img.detail__image(src=item.picture, alt=item.title)
       div.detail__description
-        strong.description-title Descripción del producto
-        p #{item.description}    
+        strong.detail__description-title Descripción del producto
+        p.detail__description-text #{item.description}    

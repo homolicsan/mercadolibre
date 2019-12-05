@@ -1,17 +1,17 @@
-/* Result Breadcrumb*/
-.result-breadcrumb {
+/* Breadcrumb*/
+.breadcrumb {
   padding: 16px 0; }
 
-.result-breadcrumb__item {
+.breadcrumb__item {
   display: inline-block;
   font-size: 14px;
   color: #999999; }
-  .result-breadcrumb__item a {
+  .breadcrumb__item a {
     color: #999999; }
-  .result-breadcrumb__item:before {
+  .breadcrumb__item:before {
     content: '>';
     padding: 0 6px; }
-  .result-breadcrumb__item:first-child:before {
+  .breadcrumb__item:first-child:before {
     content: ' ';
     padding: 0; }
 

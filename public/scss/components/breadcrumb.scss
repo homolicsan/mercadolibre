@@ -1,0 +1,24 @@
+
+/* Breadcrumb*/
+.breadcrumb {
+  padding: 16px 0;
+}
+  .breadcrumb__item {
+    display: inline-block;
+    font-size: 14px;
+    color: $color3;
+
+    a {
+      color: $color3;
+    }
+
+    &:before{
+      content: '>';
+      padding: 0 6px;  
+    }
+
+    &:first-child:before {
+      content: ' ';
+      padding: 0;
+    }
+  }
