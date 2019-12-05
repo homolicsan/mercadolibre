@@ -10,12 +10,9 @@ main.container
   div.row
     div.col-10.offset-1
       ul.breadcrumb
-        li.breadcrumb__item
-          a Categoria 1
-        li.breadcrumb__item
-          a Categoria 2
-        li.breadcrumb__item
-          a Categoria 3    
+        each val in categories
+          li.breadcrumb__item
+            a=val  
       
   div.row
     div.col-11.offset-1
