@@ -8,7 +8,7 @@
   box-sizing: border-box;
   padding-left: 10px;
   display: flex;
-  overflow: hidden;
+  position: relative;
 
 }
   .searchbox__label {
@@ -36,6 +36,36 @@
     cursor: pointer;
   }
 
+/* Autocomplete */
+
+.autocomplete {
+  position: absolute;
+  background: $color4;
+  width: 100%;
+  top: 37px;
+  margin-left: -10px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+.autocomplete__item {
+  cursor: pointer;
+}
+
+.autocomplete__item-link {
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  color: $color2;
+  width: 100%;
+  cursor: pointer;
+
+  &:hover {
+    background: $call-to-action;
+    color: $color4;
+  }
+
+}  
 /* Comentado porque no tengo una pantalla retina para probarlo
 // Retina
 @media
