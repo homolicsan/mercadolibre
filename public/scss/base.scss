@@ -4,6 +4,9 @@
 
 @import 'components/searchbox';
 
+.hidde {
+  display: none;
+}
 body {
   background: $background-color;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;

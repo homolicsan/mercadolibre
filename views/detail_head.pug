@@ -6,8 +6,8 @@ if build_static
 
 link(rel='preconnect', href='http://mla-s1-p.mlstatic.com')
 link(rel='preconnect' href='http://mla-s2-p.mlstatic.com')
-link(rel='preload', href='http://localhost:3000/images/Logo_ML.png', as='image')
-link(rel='preload', href='/javascripts/dist/searchbox.js' as='script')
+link(rel='preload', href='http://localhost:3000/images/Logo_ML.png', as='image', crossorigin)
+link(rel='preload', href='/javascripts/dist/searchbox.js' as='script', crossorigin)
 
 if !build_static
   style
