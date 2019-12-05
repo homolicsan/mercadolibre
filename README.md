@@ -2,19 +2,15 @@
 
 ## Nota
 No estaba en el requerimiento pero se agrego un Autocomplete 
-con una pegada a
-https://http2.mlstatic.com/resources/sites/MLA/autosuggest?showFilters=true&limit=6&api_version=2&q=ce
-
 
 ## Requisitos
 - node 13
 
 ## Cómo Levantar la app
 
-`` 
-  npm install
-  npm run start
-``
+- npm install 
+- npm run start
+
 ## Estrategia
 
 - Los estáticos se cachean y gzipean
@@ -24,6 +20,7 @@ Y en la home se hace una prefech de los css y js del resultado de busqueda
 
 ## Se utilizo
 - BEM Notation para el maquetado  http://getbem.com/
+- PReact en vez de React para que las apps sean livianas
 
 ## Mejoras posible de la entrega
 - CSS: generar compatibilidad de propiedades con autoprefix 
@@ -31,12 +28,24 @@ Y en la home se hace una prefech de los css y js del resultado de busqueda
 - Server Side Rendering
 - preact como dependencia, sacar del build
 
+---
+
 ## Lighthouse Audits
 
-- En la carpeta entrega/liglighthouse/pdfs se encuentran los reportes de lighthouse
+- reportes de lighthouse pdf
 
-[Index](/entrega/lighthouse/images/index.png)
+[Index](/entrega/lighthouse/pdfs/index.png)
 
-[Results](/entrega/lighthouse/images/results.png)
+[Results](/entrega/lighthouse/pdfs/results.png)
 
-[Details](/entrega/lighthouse/images/details.png)
+[Details](/entrega/lighthouse/pdfs/details.pdf)
+
+### Capturas
+#### Index
+![Index](/entrega/lighthouse/images/index.png)
+
+#### Results
+![Results](/entrega/lighthouse/images/results.png)
+
+#### Details
+![Details](/entrega/lighthouse/images/detail.png)

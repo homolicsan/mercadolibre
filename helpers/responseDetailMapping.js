@@ -10,7 +10,9 @@ const responseDetailMapping = (data_item, data_item_detail) => {
       lastname: "Homolicsan"
     },
 
-    item : {}
+    item : {},
+
+    categories: ["Categoria 1", "Sub categoria 2", "Subcategoria 3"] 
   };
 
   if (data_item){
