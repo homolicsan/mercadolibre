@@ -2,9 +2,6 @@
 
 ## Nota
 No estaba en el requerimiento pero se agrego un Autocomplete 
-con una pegada a
-https://http2.mlstatic.com/resources/sites/MLA/autosuggest?showFilters=true&limit=6&api_version=2&q=ce
-
 
 ## Requisitos
 - node 13
@@ -31,6 +28,8 @@ Y en la home se hace una prefech de los css y js del resultado de busqueda
 - Server Side Rendering
 - preact como dependencia, sacar del build
 
+===
+
 ## Lighthouse Audits
 
 - reportes de lighthouse pdf
@@ -42,11 +41,11 @@ Y en la home se hace una prefech de los css y js del resultado de busqueda
 [Details](/entrega/lighthouse/pdfs/details.pdf)
 
 ### Capturas
-- *Index*
+#### Index
 ![Index](/entrega/lighthouse/images/index.png)
 
-- *Results*
+#### Results
 ![Results](/entrega/lighthouse/images/results.png)
 
-- *Details*
+#### Details
 ![Details](/entrega/lighthouse/images/detail.png)
