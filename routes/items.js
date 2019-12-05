@@ -10,7 +10,11 @@ const htmlHeader = pug.renderFile('./views/modules/head.pug', {name: "fancyTempl
 
 /* GET items listing. */
 router.get('/', function(req, res, next) {
-  res.render('items', {  });
+  
+  let build_static = req.session.build_static;
+  req.session.build_static = '1';
+
+  res.render('items', { build_static: build_static });
 });
 
 /* GET items listing. */
@@ -96,6 +100,10 @@ router.get('/ssr', function(req, res, next) {
 
 // Detail como chunk
 router.get('/:id', function(req, res, next) {
+
+  let build_static = req.session.build_static;
+  req.session.build_static = '1';
+
   let id = req.params.id
   let url = 'http://localhost:3000/api/items/' + id;
 
@@ -104,7 +112,7 @@ router.get('/:id', function(req, res, next) {
       <html lang="es-AR">
         <head>
   `);
-  res.write(pug.renderFile('./views/detail_head.pug', {is_first_time: true}));
+  res.write(pug.renderFile('./views/detail_head.pug', {build_static: build_static}));
 
   http.get(url, (resp) => {
     let data = '';

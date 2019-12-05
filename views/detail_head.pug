@@ -1,13 +1,19 @@
 
 meta(charset='utf-8')
 meta(name='viewport', content='width=device-width, initial-scale=1.0')
-link(rel='stylesheet', href='/stylesheets/base.css')
-link(rel='stylesheet', href='/stylesheets/detail.css')
+if build_static
+  link(rel='stylesheet', href='/stylesheets/base.css')
+  link(rel='stylesheet', href='/stylesheets/detail.css')
+
 link(rel='preconnect', href='http://mla-s1-p.mlstatic.com')
 link(rel='preload', href='http://localhost:3000/images/Logo_ML.png', as='image')
 
-link(rel="prefetch", href="/stylesheets/results.css" as="style")
-link(rel="prefetch", href="/stylesheets/base.css" as="style")
-link(rel="prefetch", href="/javascripts/dist/main.js" as="script")
-style
-  include ../public/stylesheets/base.css
+if !build_static
+  style
+    include ../public/stylesheets/base.css
+    include ../public/stylesheets/detail.css
+  link(rel="prefetch", href="/stylesheets/base.css" as="style")
+  link(rel="prefetch", href="/stylesheets/results.css" as="style")
+  link(rel="prefetch", href="/stylesheets/detail.css" as="style")
+  link(rel="prefetch", href="/javascripts/dist/main.js" as="script")
+  

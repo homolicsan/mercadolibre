@@ -12,9 +12,19 @@ import apiRouter from './routes/api.js';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
+import cookieSession from 'cookie-session'
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 var app = express();
+
+app.use(cookieSession({
+  name: 'session',
+  keys: ['key1', 'key2'],
+
+  // Cookie Options
+  maxAge: 48 * 60 * 60 * 1000 // 24 hours
+}))
 
 // Gzip
 app.use(compression());

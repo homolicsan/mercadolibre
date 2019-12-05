@@ -1,6 +1,4 @@
-var ML = {
-    ajaxReady : false
-};
+
 
 (function(window){
   var urlParams = new URLSearchParams(window.location.search);
