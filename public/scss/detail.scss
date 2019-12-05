@@ -75,11 +75,28 @@
 
     }
 
-  /* 
-  Mobile
-  .detail__image {
-    order: 1;
-    width: 100%;
-  }
+  @media only screen and (max-width: 400px) {
 
-  */
+    .detail {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .detail__image {
+      order: 1;
+      width: 70%;
+      margin-left: 10%;
+    }
+
+    .detail__call-to-action{
+      width: 100%;
+    }
+
+    .detail__main-content {
+      width: 100%;
+      padding-left: 0;
+    }
+    .detail__description {
+      padding: 60px 0;
+    }
+  }

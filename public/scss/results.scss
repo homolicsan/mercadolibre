@@ -1,6 +1,7 @@
 @import '_vars';
 
 @import 'components/breadcrumb.scss';
+@import 'components/paginator.scss';
 
 /* Result Items*/
 .result-item {
@@ -26,7 +27,6 @@
       order: 2;
       font-size: 18px;
       line-height: 22px;
-
     }
       .result-item__title-link {
         color: $color1;
@@ -55,55 +55,30 @@
     color: $color3;
   }
 
-// Paginator
-.paginator_detail{
-  margin-top: 32px;
-  color: $color2;
-}
-.paginator {
-  display: flex;
-  flex-direction: row;
-  margin-top: 16px;
-}
-  .paginator__page {
-    color: $color2;
-    background: #d7dcff;
-    
-    margin-left: 10px;
-    border-radius: 5px;
-    cursor: pointer;
 
-    &:first-child {
-      margin-left: 0;
-    }
+  // Ajustes Mobile
+  @media only screen and (max-width: 400px) {
 
-    &:hover {
-      background: $color3;
-      .paginator__page_link {
-        color: $color4;
+    #app .row {
+      border-top: 1px solid $color3;
+
+      &:nth-child(1),
+      &:nth-child(2),
+      &:last-child { // no recomendable
+        border-top: none;
       }
     }
-  }
-  .paginator__page_link {
-    color: $color2;
-    min-width: 35px;
-    box-sizing: border-box;
-    padding: 10px;
-    vertical-align: middle;
-    text-align: center;
-    height: 35px;
-    display: inline-block;
-  }
-
-  .paginator__page--current {
-    background: $color2;
-    color: $color4;
-
-    .paginator__page_link{
-      color: $color4
+    
+    .result-item {
+      padding-bottom: 0;
     }
-  }
+    
+    body .row .result-item__location {
+      margin-top: -230px;
+    
+    }
 
-  .paginator__page--hide {
-    display: none;
+    .result-item__title-link {
+        padding: 16px 0;
+    }
   }

@@ -9,6 +9,12 @@ const Pages = connect(['current_page', 'pages'], actions)(
 		pages.map((item, index) =>{
 			let class_name = 'paginator__page';
 
+	
+
+			if (index + 2 === current_page) {
+				class_name += ' paginator__page--previous-current';
+			}
+
 			if (index + 1 === current_page) {
 				class_name += ' paginator__page--current';
 			}
@@ -36,11 +42,11 @@ export const Pagination = connect(['current_page', 'total', 'last_page'], action
 					
 					<ul class='paginator'>
 						{(() => 
-								 ( (current_page === 1)? '' : <li class='paginator__page'><a class='paginator__page_link' onClick={prev}>Anterior</a></li>)
+								 ( (current_page === 1)? '' : <li class='paginator__page paginator__previous-next '><a class='paginator__page_link' onClick={prev}>Anterior</a></li>)
 						)()}
 						<Pages />
 						{(() => 
-								 ((current_page === last_page)? '' : <li class='paginator__page'><a class='paginator__page_link' onClick={next}>Siguiente</a></li>)
+								 ((current_page === last_page)? '' : <li class='paginator__page paginator__previous-next'><a class='paginator__page_link' onClick={next}>Siguiente</a></li>)
 							)()}
 					</ul>
 				</div>
