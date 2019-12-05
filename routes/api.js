@@ -1,9 +1,9 @@
 import express from 'express';
 import https from 'https';
 // TODO cambiar nombre 
-import responseMapping from '../helpers/items/responseMapping.js';
-import responseDetailMapping from '../helpers/items/responseDetailMapping.js';
-import getDataAsPromise from '../helpers/items/getDataAsPromise.js';
+import responseMapping from '../helpers/responseMapping.js';
+import responseDetailMapping from '../helpers/responseDetailMapping.js';
+import getDataAsPromise from '../helpers/getDataAsPromise.js';
 
 const  router = express.Router();
 

@@ -5,9 +5,7 @@ import pug from 'pug';
 // import serverSideRendering from '../helpers/server-side-rendering.jsx';
 
 const router = express.Router();
-
 const jsFunctionString = pug.renderFile('./views/items-ssr.pug', {name: "fancyTemplateFun"});
-
 const htmlHeader = pug.renderFile('./views/modules/head.pug', {name: "fancyTemplateFun"});
 
 /* GET items listing. */
@@ -101,12 +99,7 @@ router.get('/:id', function(req, res, next) {
   let id = req.params.id
   let url = 'http://localhost:3000/api/items/' + id;
 
-  res.write(`
-    <!DOCTYPE html>
-    <html><head><meta charset="utf-8">
-    <link rel="stylesheet" href="/stylesheets/base.css">
-    <link rel="stylesheet" href="/stylesheets/detail.css">
-`)
+  res.write(pug.renderFile('./views/detail_head.pug', {is_first_time: true}));
 
   http.get(url, (resp) => {
     let data = '';
@@ -117,24 +110,26 @@ router.get('/:id', function(req, res, next) {
 
     // The whole response has been received. Print out the result.
     resp.on('end', () => {
-
       data = JSON.parse(data);
 
-      res.write(`<title>${data.item.title}</title>
+      res.write(`
+        <title>${data.item.title}</title>
+        <meta name='description' content='Mercadolibre descripcion, keyword1 keyword2 keyword3' />
       </head>
       <body>`)
 
       res.write(pug.renderFile('./views/detail_body.pug', data));
-      res.end('</body></html>');
+      res.end(`
+        </body>
+      </html>`);
 
     });
 
     }).on("error", (err) => {
-
-      res.end();
-       
+      res.end(`
+        </body>
+      </html>`);
     });
-
 
 });
 

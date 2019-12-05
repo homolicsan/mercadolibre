@@ -23,7 +23,7 @@ export let actions = store => ({
     }
   },
   next(state) {
-    let _current_page = (state.page < state.last_page ) ? state.page + 1 : state.last_page;
+    let _current_page = (state.current_page < state.last_page ) ? state.current_page + 1 : state.last_page;
 
     return {
       current_page : _current_page,

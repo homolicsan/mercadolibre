@@ -8,9 +8,14 @@ header.header
 
 main.container
   div.row
-    div.col-10.offset-2 
-      div
-        h1 #{item.title}
-        img(src=item.picture)
-      div
+    div.col-10.offset-1
+      div.detail
+        div.detail__main-content
+          h1 #{item.title}
+          span.detail__price #{item.price.amount_formated}
+          a.detail__call-to-action Comprar
+        
+        img.detail__image(src=item.picture)
+      div.detail__description
+        strong.description-title Descripción del producto
         p #{item.description}    

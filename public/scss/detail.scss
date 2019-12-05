@@ -1,5 +1,36 @@
 @import '_vars';
 
 .detail {
-  background: #fff; 
+
+  display: flex;
 }
+
+  .detail__main-content {
+    order: 2
+  }
+
+  .detail__image {
+    order: 1;
+    width: 680px;
+  }
+
+  .detail__description-title {
+    color: $color1;
+    font-size: 24px;
+  }
+
+  .detail__price {
+    color: $color1;
+    font-size: 46px;
+  }
+
+  .detail__description {
+    color: $color3;
+    font-size: 16px;
+  }
+
+  .detail__call-to-action{
+    background: $call-to-action;
+    color: #fff;
+    width: 200px;
+  }

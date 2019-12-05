@@ -1,20 +1,103 @@
+/* Result Breadcrumb*/
+.result-breadcrumb {
+  padding: 16px 0; }
+
+.result-breadcrumb__item {
+  display: inline-block;
+  font-size: 14px;
+  color: #999999; }
+  .result-breadcrumb__item a {
+    color: #999999; }
+  .result-breadcrumb__item:before {
+    content: '>';
+    padding: 0 6px; }
+  .result-breadcrumb__item:first-child:before {
+    content: ' ';
+    padding: 0; }
+
+/* Result Items*/
 .result-item {
-  background: #fff; }
+  display: flex;
+  padding: 16px 0 16px 16px; }
+
+.result-item__main-content {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  width: 290px; }
+
+.result-item__price {
+  order: 1;
+  font-size: 24px;
+  padding-top: 16px;
+  color: #333333; }
+
+.result-item__title {
+  order: 2;
+  font-size: 18px;
+  line-height: 22px; }
+
+.result-item__title-link {
+  color: #333333;
+  padding: 32px 0;
+  display: block; }
+
+.result-item__image-link {
+  order: 1;
+  width: 180px;
+  height: 180px;
+  display: block; }
 
 .result-item__image {
   width: 180px;
   height: 180px;
   border-radius: 4px;
-  box-sizing: border-box; }
+  margin-right: 16px; }
+
+.result-item__location {
+  order: 3;
+  font-size: 12px;
+  padding-top: 24px;
+  color: #999999; }
+
+.paginator_detail {
+  margin-top: 32px;
+  color: #666666; }
 
 .paginator {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  margin-top: 16px; }
 
 .paginator__page {
-  background: #ccc;
-  color: #3483fa;
-  padding: 5px;
-  border-radius: 4px;
+  color: #666666;
+  background: #d7dcff;
+  margin-left: 10px;
+  border-radius: 5px;
   cursor: pointer; }
+  .paginator__page:first-child {
+    margin-left: 0; }
+  .paginator__page:hover {
+    background: #999999; }
+    .paginator__page:hover .paginator__page_link {
+      color: #eeeeee; }
+
+.paginator__page_link {
+  color: #666666;
+  min-width: 35px;
+  box-sizing: border-box;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+  height: 35px;
+  display: inline-block; }
+
+.paginator__page--current {
+  background: #666666;
+  color: #eeeeee; }
+  .paginator__page--current .paginator__page_link {
+    color: #eeeeee; }
+
+.paginator__page--hide {
+  display: none; }
 
