@@ -73,7 +73,7 @@
   line-height: 20px;
   color: #999999; }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 415px) {
   .detail {
     display: flex;
     flex-direction: column; }

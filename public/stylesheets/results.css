@@ -111,7 +111,7 @@
   padding-top: 24px;
   color: #999999; }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 415px) {
   #app .row {
     border-top: 1px solid #999999; }
     #app .row:nth-child(1), #app .row:nth-child(2), #app .row:last-child {

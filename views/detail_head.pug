@@ -1,4 +1,3 @@
-
 meta(charset='utf-8')
 meta(name='viewport', content='width=device-width, initial-scale=1.0')
 if build_static
@@ -6,6 +5,7 @@ if build_static
   link(rel='stylesheet', href='/stylesheets/detail.css')
 
 link(rel='preconnect', href='http://mla-s1-p.mlstatic.com')
+link(rel='preconnect' href='http://mla-s2-p.mlstatic.com')
 link(rel='preload', href='http://localhost:3000/images/Logo_ML.png', as='image')
 link(rel='preload', href='/javascripts/dist/searchbox.js' as='script')
 
@@ -16,5 +16,5 @@ if !build_static
   link(rel="prefetch", href="/stylesheets/base.css" as="style")
   link(rel="prefetch", href="/stylesheets/results.css" as="style")
   link(rel="prefetch", href="/stylesheets/detail.css" as="style")
-  link(rel="prefetch", href="/javascripts/dist/main.js" as="script")
+  link(rel="prefetch", href="/javascripts/dist/results.js" as="script")
   
