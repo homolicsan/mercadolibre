@@ -12,7 +12,7 @@ html(lang='es-AR')
     
     link(rel="prefetch", href="/stylesheets/results.css" as="style")
     link(rel="prefetch", href="/stylesheets/base.css" as="style")
-    link(rel="prefetch", href="/javascripts/dist/main.js" as="script")
+    link(rel="prefetch", href="/javascripts/dist/results.js" as="script")
 
     if !build_static
       style
@@ -26,3 +26,8 @@ body
         h1.col-1.offset-1
           +logo
         +searchbox
+  script.
+      var ML = {
+      };
+
+  script(src="/javascripts/dist/searchbox.js", type="module")
