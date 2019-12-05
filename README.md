@@ -13,10 +13,9 @@ No estaba en el requerimiento pero se agrego un Autocomplete
 
 ## Estrategia
 
-- Los estáticos se cachean y gzipean
-Y en la home se hace una prefech de los css y js del resultado de busqueda
-
-- En resultados de busqueda se hace un prefech los css y js del detalle del producto
+Si el usuario ingresa por primera vez, se sirven ciertos recuros embebidos y se hacen prefetch de recursos que se utilizaran en la página siguiente.
+en la home se cargan los recursos criticos de resultados
+y en resultados del detalle
 
 ## Se utilizo
 - BEM Notation para el maquetado  http://getbem.com/
@@ -32,11 +31,11 @@ Y en la home se hace una prefech de los css y js del resultado de busqueda
 
 ## Lighthouse Audits
 
-- reportes de lighthouse pdf
+reportes de lighthouse:
 
-[Index](/entrega/lighthouse/pdfs/index.png)
+[Index](/entrega/lighthouse/pdfs/index.pdf)
 
-[Results](/entrega/lighthouse/pdfs/results.png)
+[Results](/entrega/lighthouse/pdfs/results.pdf)
 
 [Details](/entrega/lighthouse/pdfs/details.pdf)
 
