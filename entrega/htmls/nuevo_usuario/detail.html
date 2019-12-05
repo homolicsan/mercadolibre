@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="http://mla-s1-p.mlstatic.com" />
+    <link rel="preload" href="http://localhost:3000/images/Logo_ML.png" as="image" />
+    <link rel="preload" href="/javascripts/dist/searchbox.js" as="script" />
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+        
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+        
+        body {
+            line-height: 1;
+        }
+        
+        ol,
+        ul {
+            list-style: none;
+        }
+        
+        blockquote,
+        q {
+            quotes: none;
+        }
+        
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        /* POSITIONING */
+        
+        .left {
+            text-align: left;
+        }
+        
+        .right {
+            text-align: right;
+        }
+        
+        .center {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .justify {
+            text-align: justify;
+        }
+        /* ==== GRID SYSTEM ==== */
+        
+        .container {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .row {
+            position: relative;
+            width: 100%;
+        }
+        
+        .row [class^="col"] {
+            float: left;
+            margin: 0.5rem 2%;
+            min-height: 0.125rem;
+        }
+        
+        .col-1,
+        .col-2,
+        .col-3,
+        .col-4,
+        .col-5,
+        .col-6,
+        .col-7,
+        .col-8,
+        .col-9,
+        .col-10,
+        .col-11,
+        .col-12 {
+            width: 96%;
+        }
+        
+        .col-1-sm {
+            width: 4.33%;
+        }
+        
+        .col-2-sm {
+            width: 12.66%;
+        }
+        
+        .col-3-sm {
+            width: 21%;
+        }
+        
+        .col-4-sm {
+            width: 29.33%;
+        }
+        
+        .col-5-sm {
+            width: 37.66%;
+        }
+        
+        .col-6-sm {
+            width: 46%;
+        }
+        
+        .col-7-sm {
+            width: 54.33%;
+        }
+        
+        .col-8-sm {
+            width: 62.66%;
+        }
+        
+        .col-9-sm {
+            width: 71%;
+        }
+        
+        .col-10-sm {
+            width: 79.33%;
+        }
+        
+        .col-11-sm {
+            width: 87.66%;
+        }
+        
+        .col-12-sm {
+            width: 96%;
+        }
+        
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .hidden-sm {
+            display: none;
+        }
+        
+        @media only screen and (min-width: 33.75em) {
+            /* 540px */
+            .container {
+                width: 80%;
+            }
+        }
+        
+        @media only screen and (min-width: 45em) {
+            /* 720px */
+            .col-1 {
+                width: 4.33%;
+            }
+            .col-2 {
+                width: 12.66%;
+            }
+            .col-3 {
+                width: 21%;
+            }
+            .col-4 {
+                width: 29.33%;
+            }
+            .col-5 {
+                width: 37.66%;
+            }
+            .col-6 {
+                width: 46%;
+            }
+            .col-7 {
+                width: 54.33%;
+            }
+            .col-8 {
+                width: 62.66%;
+            }
+            .col-9 {
+                width: 71%;
+            }
+            .col-10 {
+                width: 79.33%;
+            }
+            .col-11 {
+                width: 87.66%;
+            }
+            .col-12 {
+                width: 96%;
+            }
+            .hidden-sm {
+                display: block;
+            }
+            .offset-1 {
+                padding-left: 4.33%;
+            }
+            .offset-2 {
+                padding-left: 12.66%;
+            }
+            .offset-3 {
+                padding-left: 21%;
+            }
+            .offset-4 {
+                padding-left: 29.33%;
+            }
+            .offset-5 {
+                padding-left: 37.66%;
+            }
+            .offset-6 {
+                padding-left: 46%;
+            }
+            .offset-7 {
+                padding-left: 54.33%;
+            }
+            .offset-8 {
+                padding-left: 62.66%;
+            }
+            .offset-9 {
+                padding-left: 71%;
+            }
+            .offset-10 {
+                padding-left: 79.33%;
+            }
+            .offset-11 {
+                padding-left: 87.66%;
+            }
+            .offset-12 {
+                padding-left: 96%;
+            }
+        }
+        
+        @media only screen and (min-width: 60em) {
+            /* 960px */
+            .container {
+                width: 75%;
+                max-width: 65.188rem;
+            }
+        }
+        /* */
+        
+        .searchbox {
+            background: #eeeeee;
+            display: inline-block;
+            height: 33px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            padding-left: 10px;
+            display: flex;
+            position: relative;
+        }
+        
+        .searchbox__label {
+            display: inline-block;
+            text-indent: -900px;
+        }
+        
+        .searchbox__input {
+            width: 92%;
+            height: 100%;
+            border: 0;
+            outline: 0;
+            font-size: 14px;
+            box-sizing: border-box;
+            color: #999999;
+        }
+        
+        .searchbox__submit {
+            background: url("/images/ic_Search.png") 15px center no-repeat;
+            width: 46px;
+            height: 33px;
+            border: 0;
+            outline: 0;
+            text-indent: -2000px;
+            cursor: pointer;
+        }
+        /* Autocomplete */
+        
+        .autocomplete {
+            position: absolute;
+            background: #eeeeee;
+            width: 100%;
+            top: 37px;
+            margin-left: -10px;
+            border-radius: 4px;
+            z-index: 2;
+        }
+        
+        .autocomplete__item {
+            cursor: pointer;
+        }
+        
+        .autocomplete__item-link {
+            padding: 10px;
+            box-sizing: border-box;
+            display: inline-block;
+            color: #666666;
+            width: 100%;
+            cursor: pointer;
+        }
+        
+        .autocomplete__item-link:hover {
+            background: #3483fa;
+            color: #eeeeee;
+        }
+        /* Comentado porque no tengo una pantalla retina para probarlo
+// Retina
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+
+  .searchbox__submit {
+    background: url('/images/ic_Search@2x.png'); 
+  }
+
+  .logo {
+    background: url('/images/Logo_ML@2x.png');
+  }
+
+}
+*/
+        
+        body {
+            background: #eeeeee;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            overflow-y: scroll;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .header {
+            padding: 8px 0;
+            background: #ffe600;
+        }
+        
+        .logo {
+            background: url("/images/Logo_ML.png") top left no-repeat;
+            width: 54px;
+            height: 36px;
+            text-indent: -2000px;
+            display: inline-block;
+            background-size: 49px 33px;
+        }
+        /* Breadcrumb*/
+        
+        .breadcrumb {
+            padding: 16px 0;
+        }
+        
+        .breadcrumb__item {
+            display: inline-block;
+            font-size: 14px;
+            color: #999999;
+        }
+        
+        .breadcrumb__item a {
+            color: #999999;
+        }
+        
+        .breadcrumb__item:before {
+            content: '>';
+            padding: 0 6px;
+        }
+        
+        .breadcrumb__item:first-child:before {
+            content: ' ';
+            padding: 0;
+        }
+        
+        .detail {
+            display: flex;
+        }
+        
+        .detail__image {
+            order: 1;
+            width: 600px;
+        }
+        
+        .detail__main-content {
+            order: 2;
+            padding-left: 16px;
+            max-width: 298px;
+        }
+        
+        .detail__seller-info {
+            font-size: 14px;
+            margin: 32px 0 16px;
+            color: #666666;
+            display: block;
+        }
+        
+        .detail__title {
+            color: #333333;
+            font-size: 24px;
+            line-height: 28px;
+            color: #333333;
+        }
+        
+        .detail__price {
+            color: #333333;
+            font-size: 46px;
+            margin: 32px 0;
+            color: #333333;
+            display: block;
+        }
+        
+        .detail__call-to-action {
+            background: #3483fa;
+            color: #eeeeee;
+            width: 220px;
+            display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+            height: 38px;
+            line-height: 38px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .detail__description {
+            padding: 90px 0 0 32px;
+        }
+        
+        .detail__description-title {
+            color: #333333;
+            font-size: 28px;
+            margin-bottom: 32px;
+            display: block;
+        }
+        
+        .detail__description-text {
+            font-size: 16px;
+            line-height: 20px;
+            color: #999999;
+        }
+        
+        @media only screen and (max-width: 400px) {
+            .detail {
+                display: flex;
+                flex-direction: column;
+            }
+            .detail__image {
+                order: 1;
+                width: 70%;
+                margin-left: 10%;
+            }
+            .detail__call-to-action {
+                width: 100%;
+            }
+            .detail__main-content {
+                width: 100%;
+                padding-left: 0;
+            }
+            .detail__description {
+                padding: 60px 0;
+            }
+        }
+    </style>
+    <link rel="prefetch" href="/stylesheets/base.css" as="style" />
+    <link rel="prefetch" href="/stylesheets/results.css" as="style" />
+    <link rel="prefetch" href="/stylesheets/detail.css" as="style" />
+    <link rel="prefetch" href="/javascripts/dist/main.js" as="script" />
+    <title>Samsung Galaxy A70 Dual Sim 128 Gb Azul 6 Gb Ram</title>
+    <meta name='description' content='Mercadolibre descripcion, keyword1 keyword2 keyword3' />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row"><span class="col-1 offset-1"><a class="logo" href="/">Mercadolibre</a></span>
+                <div id="searchbox">
+                    <form class="col-9 searchbox" action="/items" method="get">
+                        <label class="searchbox__label" for="q">buscar</label>
+                        <input class="searchbox__input" type="text" name="q" id="q" placeholder="Nunca dejes de buscar" autocomplete="off" />
+                        <input class="searchbox__submit" type="submit" value="Buscar" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb__item"><a>Categoria 1</a></li>
+                    <li class="breadcrumb__item"><a>Categoria 2</a></li>
+                    <li class="breadcrumb__item"><a>Categoria 3 </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-11 offset-1">
+                <div class="detail">
+                    <div class="detail__main-content"><span class="detail__seller-info">Nuevo - 234 vendidos</span>
+                        <h1 class="detail__title">Samsung Galaxy A70 Dual Sim 128 Gb Azul 6 Gb Ram</h1><span class="detail__price">$ 34.500</span><a class="detail__call-to-action" role="button">Comprar</a></div><img class="detail__image" src="http://mla-s1-p.mlstatic.com/854906-MLA31838701710_082019-O.jpg" alt="Samsung Galaxy A70 Dual Sim 128 Gb Azul 6 Gb Ram" /></div>
+                <div class="detail__description"><strong class="detail__description-title">Descripción del producto</strong>
+                    <p class="detail__description-text">Experiencia visual excepcional Su gran pantalla Super AMOLED de 6.7 &quot; con marco casi inexistente te garantiza colores vívidos e intensos y ángulos de visión mucho más amplios. Mirá tus series, videos y películas preferidas sin perderte ningún detalle. Fotografía profesional en tu bolsillo Con su cámara de poca profundidad lograrás fondos difuminados; la de ángulo amplio te permitirá capturar fotos brillantes; y con la ultra gran angular obtendrás imágenes panorámicas excepcionales. Además, podrás sacarte selfies incomparables con su cámara principal de 32 Mpx. Seguridad en tu pantalla Accedé a tu smartphone de manera rápida y segura gracias a la nueva tecnología de autenticación biométrica que fusiona el lector de huella dactilar ultrasónico directamente a la pantalla. ¡Desbloqueá tu equipo en un solo movimiento y empezá a disfrutar! Batería superior ¡Desenchufate! Con su gran batería de 4500 mAh tendrás energía para rato y podrás jugar, ver series o trabajar durante días sin necesidad de recargar tu teléfono. A su vez, la tecnología de carga súper rápida te brindará la potencia que necesitás sin esperar.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/javascripts/dist/searchbox.js" type="module"> </script>
+</body>
+
+</html>

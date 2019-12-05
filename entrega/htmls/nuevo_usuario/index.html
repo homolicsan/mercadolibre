@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mercado Libre</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mercadolibre descripcion, keyword1 keyword2 keyword3">
+    <link rel="prefetch" href="/stylesheets/results.css" as="style">
+    <link rel="prefetch" href="/stylesheets/base.css" as="style">
+    <link rel="prefetch" href="/javascripts/dist/results.js" as="script">
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+        
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+        
+        body {
+            line-height: 1;
+        }
+        
+        ol,
+        ul {
+            list-style: none;
+        }
+        
+        blockquote,
+        q {
+            quotes: none;
+        }
+        
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        /* POSITIONING */
+        
+        .left {
+            text-align: left;
+        }
+        
+        .right {
+            text-align: right;
+        }
+        
+        .center {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .justify {
+            text-align: justify;
+        }
+        /* ==== GRID SYSTEM ==== */
+        
+        .container {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .row {
+            position: relative;
+            width: 100%;
+        }
+        
+        .row [class^="col"] {
+            float: left;
+            margin: 0.5rem 2%;
+            min-height: 0.125rem;
+        }
+        
+        .col-1,
+        .col-2,
+        .col-3,
+        .col-4,
+        .col-5,
+        .col-6,
+        .col-7,
+        .col-8,
+        .col-9,
+        .col-10,
+        .col-11,
+        .col-12 {
+            width: 96%;
+        }
+        
+        .col-1-sm {
+            width: 4.33%;
+        }
+        
+        .col-2-sm {
+            width: 12.66%;
+        }
+        
+        .col-3-sm {
+            width: 21%;
+        }
+        
+        .col-4-sm {
+            width: 29.33%;
+        }
+        
+        .col-5-sm {
+            width: 37.66%;
+        }
+        
+        .col-6-sm {
+            width: 46%;
+        }
+        
+        .col-7-sm {
+            width: 54.33%;
+        }
+        
+        .col-8-sm {
+            width: 62.66%;
+        }
+        
+        .col-9-sm {
+            width: 71%;
+        }
+        
+        .col-10-sm {
+            width: 79.33%;
+        }
+        
+        .col-11-sm {
+            width: 87.66%;
+        }
+        
+        .col-12-sm {
+            width: 96%;
+        }
+        
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .hidden-sm {
+            display: none;
+        }
+        
+        @media only screen and (min-width: 33.75em) {
+            /* 540px */
+            .container {
+                width: 80%;
+            }
+        }
+        
+        @media only screen and (min-width: 45em) {
+            /* 720px */
+            .col-1 {
+                width: 4.33%;
+            }
+            .col-2 {
+                width: 12.66%;
+            }
+            .col-3 {
+                width: 21%;
+            }
+            .col-4 {
+                width: 29.33%;
+            }
+            .col-5 {
+                width: 37.66%;
+            }
+            .col-6 {
+                width: 46%;
+            }
+            .col-7 {
+                width: 54.33%;
+            }
+            .col-8 {
+                width: 62.66%;
+            }
+            .col-9 {
+                width: 71%;
+            }
+            .col-10 {
+                width: 79.33%;
+            }
+            .col-11 {
+                width: 87.66%;
+            }
+            .col-12 {
+                width: 96%;
+            }
+            .hidden-sm {
+                display: block;
+            }
+            .offset-1 {
+                padding-left: 4.33%;
+            }
+            .offset-2 {
+                padding-left: 12.66%;
+            }
+            .offset-3 {
+                padding-left: 21%;
+            }
+            .offset-4 {
+                padding-left: 29.33%;
+            }
+            .offset-5 {
+                padding-left: 37.66%;
+            }
+            .offset-6 {
+                padding-left: 46%;
+            }
+            .offset-7 {
+                padding-left: 54.33%;
+            }
+            .offset-8 {
+                padding-left: 62.66%;
+            }
+            .offset-9 {
+                padding-left: 71%;
+            }
+            .offset-10 {
+                padding-left: 79.33%;
+            }
+            .offset-11 {
+                padding-left: 87.66%;
+            }
+            .offset-12 {
+                padding-left: 96%;
+            }
+        }
+        
+        @media only screen and (min-width: 60em) {
+            /* 960px */
+            .container {
+                width: 75%;
+                max-width: 65.188rem;
+            }
+        }
+        /* */
+        
+        .searchbox {
+            background: #eeeeee;
+            display: inline-block;
+            height: 33px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            padding-left: 10px;
+            display: flex;
+            position: relative;
+        }
+        
+        .searchbox__label {
+            display: inline-block;
+            text-indent: -900px;
+        }
+        
+        .searchbox__input {
+            width: 92%;
+            height: 100%;
+            border: 0;
+            outline: 0;
+            font-size: 14px;
+            box-sizing: border-box;
+            color: #999999;
+        }
+        
+        .searchbox__submit {
+            background: url("/images/ic_Search.png") 15px center no-repeat;
+            width: 46px;
+            height: 33px;
+            border: 0;
+            outline: 0;
+            text-indent: -2000px;
+            cursor: pointer;
+        }
+        /* Autocomplete */
+        
+        .autocomplete {
+            position: absolute;
+            background: #eeeeee;
+            width: 100%;
+            top: 37px;
+            margin-left: -10px;
+            border-radius: 4px;
+            z-index: 2;
+        }
+        
+        .autocomplete__item {
+            cursor: pointer;
+        }
+        
+        .autocomplete__item-link {
+            padding: 10px;
+            box-sizing: border-box;
+            display: inline-block;
+            color: #666666;
+            width: 100%;
+            cursor: pointer;
+        }
+        
+        .autocomplete__item-link:hover {
+            background: #3483fa;
+            color: #eeeeee;
+        }
+        /* Comentado porque no tengo una pantalla retina para probarlo
+// Retina
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+
+  .searchbox__submit {
+    background: url('/images/ic_Search@2x.png'); 
+  }
+
+  .logo {
+    background: url('/images/Logo_ML@2x.png');
+  }
+
+}
+*/
+        
+        body {
+            background: #eeeeee;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            overflow-y: scroll;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .header {
+            padding: 8px 0;
+            background: #ffe600;
+        }
+        
+        .logo {
+            background: url("/images/Logo_ML.png") top left no-repeat;
+            width: 54px;
+            height: 36px;
+            text-indent: -2000px;
+            display: inline-block;
+            background-size: 49px 33px;
+        }
+    </style>
+    <link rel="prefetch" href="/stylesheets/home.css" as="style">
+</head>
+
+</html>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <h1 class="col-1 offset-1"><a class="logo" href="/">Mercadolibre</a></h1>
+                <div id="searchbox">
+                    <form class="col-9 searchbox" action="/items" method="get">
+                        <label class="searchbox__label" for="q">buscar</label>
+                        <input class="searchbox__input" type="text" name="q" id="q" placeholder="Nunca dejes de buscar" autocomplete="off" />
+                        <input class="searchbox__submit" type="submit" value="Buscar" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        var ML = {};
+    </script>
+    <script src="/javascripts/dist/searchbox.js" type="module"></script>
+</body>
