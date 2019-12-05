@@ -6,7 +6,7 @@ html(lang='es-AR')
     title='Mercadolibre | Resultados'
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='description', content='Mercadolibre descripcion, keyword1 keyword2 keyword3')
-    link(rel='stylesheet', href='/stylesheets/results.css')
+    link(rel='stylesheet', href='/stylesheets/results.css', media="(min-width: 40em)" )
     script
       include ../public/javascripts/inline/main-result.js
     |
@@ -15,6 +15,7 @@ html(lang='es-AR')
     link(rel='prefetch', href='/stylesheets/detail.css' as='style')
     style
       include ../public/stylesheets/base.css
+      include ../public/stylesheets/results-seo.css
    
 body
   header.header
@@ -27,4 +28,4 @@ body
   div.container
       div#app
 
-script(src="/javascripts/dist/main.js",type="module")
+  script(src="/javascripts/dist/main.js", type="module")

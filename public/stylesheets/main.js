@@ -81,31 +81,31 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./public/scss/results.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./public/scss/results-seo.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./public/scss/results.js":
-/*!********************************!*\
-  !*** ./public/scss/results.js ***!
-  \********************************/
+/***/ "./public/scss/results-seo.js":
+/*!************************************!*\
+  !*** ./public/scss/results-seo.js ***!
+  \************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _results_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./results.scss */ \"./public/scss/results.scss\");\n/* harmony import */ var _results_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_results_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* css */\n\n\n\n//# sourceURL=webpack:///./public/scss/results.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _results_seo_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./results-seo.scss */ \"./public/scss/results-seo.scss\");\n/* harmony import */ var _results_seo_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_results_seo_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* css */\n\n\n\n//# sourceURL=webpack:///./public/scss/results-seo.js?");
 
 /***/ }),
 
-/***/ "./public/scss/results.scss":
-/*!**********************************!*\
-  !*** ./public/scss/results.scss ***!
-  \**********************************/
+/***/ "./public/scss/results-seo.scss":
+/*!**************************************!*\
+  !*** ./public/scss/results-seo.scss ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./public/scss/results.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./public/scss/results-seo.scss?");
 
 /***/ })
 

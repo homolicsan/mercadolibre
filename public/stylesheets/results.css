@@ -41,11 +41,11 @@
 .paginator__page_link {
   color: #666666;
   min-width: 35px;
+  height: 35px;
   box-sizing: border-box;
   padding: 10px;
   vertical-align: middle;
   text-align: center;
-  height: 35px;
   display: inline-block; }
 
 .paginator__page--current {

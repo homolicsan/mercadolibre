@@ -218,9 +218,13 @@ a {
 
 /* */
 .searchbox {
-  background: #fff;
+  background: #eeeeee;
   display: inline-block;
   height: 38px; }
+
+.searchbox__label {
+  display: inline-block;
+  text-indent: -900px; }
 
 .searchbox__input {
   width: 92%;

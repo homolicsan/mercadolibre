@@ -9,8 +9,6 @@ const Pages = connect(['current_page', 'pages'], actions)(
 		pages.map((item, index) =>{
 			let class_name = 'paginator__page';
 
-	
-
 			if (index + 2 === current_page) {
 				class_name += ' paginator__page--previous-current';
 			}
