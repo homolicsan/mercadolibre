@@ -70,4 +70,36 @@ router.get('/items/:id', function(req, res, next) {
   }
 });
 
+// Autocomplete
+router.get('/autocomplete', function(req, res, next) {
+
+  let query = req.query;
+  query = query.q;
+
+  let url = 'https://http2.mlstatic.com/resources/sites/MLA/autosuggest?showFilters=true&limit=6&api_version=2&q=' + query;
+
+  https.get(url, (resp) => {
+    let data = '';
+
+    // A chunk of data has been recieved.
+    resp.on('data', (chunk) => {
+        data += chunk;
+    });
+
+    // The whole response has been received. Print out the result.
+    resp.on('end', () => {
+      res.json( JSON.parse(data));
+    });
+
+    }).on("error", (err) => {
+      // TODO: se podria usar http codes
+      res.json({
+          error: 'error',
+          message: err.message
+      });
+      console.log("Error: " + err.message);
+    });
+});
+
+
 export default router;
