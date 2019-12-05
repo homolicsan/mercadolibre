@@ -15,7 +15,7 @@ main.container
           span.detail__price #{item.price.amount_formated}
           a.detail__call-to-action Comprar
         
-        img.detail__image(src=item.picture)
+        img.detail__image(src=item.picture, alt=item.title)
       div.detail__description
         strong.description-title Descripción del producto
         p #{item.description}    

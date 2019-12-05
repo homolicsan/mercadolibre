@@ -99,6 +99,11 @@ router.get('/:id', function(req, res, next) {
   let id = req.params.id
   let url = 'http://localhost:3000/api/items/' + id;
 
+  res.write(`
+    <!DOCTYPE html>
+      <html lang="es-AR">
+        <head>
+  `);
   res.write(pug.renderFile('./views/detail_head.pug', {is_first_time: true}));
 
   http.get(url, (resp) => {
