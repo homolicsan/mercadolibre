@@ -13,30 +13,38 @@ No estaba en el requerimiento pero se agrego un Autocomplete
 
 ## Estrategia
 
-- Los estáticos se cachean y gzipean
-Y en la home se hace una prefech de los css y js del resultado de busqueda
+Si el usuario ingresa por primera vez, se sirven ciertos recuros embebidos y se hacen prefetch de recursos que se utilizaran en la página siguiente.
+en la home se cargan los recursos criticos de resultados
+y en resultados del detalle
 
-- En resultados de busqueda se hace un prefech los css y js del detalle del producto
-
-## Se utilizo
+## En desarollo
 - BEM Notation para el maquetado  http://getbem.com/
 - PReact en vez de React para que las apps sean livianas
 
-## Mejoras posible de la entrega
-- CSS: generar compatibilidad de propiedades con autoprefix 
-- build por contenido
-- Server Side Rendering
-- preact como dependencia, sacar del build
+---
+## HTMLs legibles
+Nuevo Usuario
+[Index](/entrega/htmls/nuevo_usuario/index.html)
+
+[Results](/entrega/htmls/nuevo_usuario/results.html)
+
+[Details](/entrega/htmls/nuevo_usuario/detail.html)
+
+Usuario Recurrente
+[Index](/entrega/htmls/usuario_recurrente/index.html)
+
+[Results](/entrega/htmls/usuario_recurrente/results.html)
+
+[Details](/entrega/htmls/usuario_recurrente/detail.html)
 
 ---
-
 ## Lighthouse Audits
 
-- reportes de lighthouse pdf
+Reportes de lighthouse:
 
-[Index](/entrega/lighthouse/pdfs/index.png)
+[Index](/entrega/lighthouse/pdfs/index.pdf)
 
-[Results](/entrega/lighthouse/pdfs/results.png)
+[Results](/entrega/lighthouse/pdfs/results.pdf)
 
 [Details](/entrega/lighthouse/pdfs/details.pdf)
 
@@ -49,3 +57,11 @@ Y en la home se hace una prefech de los css y js del resultado de busqueda
 
 #### Details
 ![Details](/entrega/lighthouse/images/detail.png)
+
+
+## Mejoras posible de la entrega
+- CSS: generar compatibilidad de propiedades con autoprefix 
+- build por contenido
+- Server Side Rendering
+- preact como dependencia, sacar del build
+
