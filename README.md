@@ -1,7 +1,7 @@
 # Examen de frontend para Mercadolibre
 
 ## Nota
-No estaba en el requerimiento pero agregué un Autocomplete, y carga lazy de imagenes en el resultado de búsqueda
+No estaba en el requerimiento pero agregué un Autocomplete, y carga lazy de imágenes en el resultado de búsqueda
 
 ## Requisitos
 - node 13
