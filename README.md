@@ -1,7 +1,7 @@
 # Examen de frontend para Mercadolibre
 
 ## Nota
-No estaba en el requerimiento pero se agrego un Autocomplete 
+No estaba en el requerimiento pero agregué un Autocomplete, y carga lazy de imagenes en el resultado de búsqueda
 
 ## Requisitos
 - node 13
@@ -13,9 +13,9 @@ No estaba en el requerimiento pero se agrego un Autocomplete
 
 ## Estrategia
 
-Si el usuario ingresa por primera vez, se sirven ciertos recuros embebidos y se hacen prefetch de recursos que se utilizaran en la página siguiente.
-en la home se cargan los recursos criticos de resultados
-y en resultados del detalle
+Si el usuario ingresa por primera vez al sitio se sirven ciertos recursos (js y css) embebidos y se hacen prefetch de recursos que se utilizaran en la página siguiente.
+En la home se cargan los recursos criticos de resultados
+y en resultados de busquedas los recursos del detalle
 
 ## En desarollo
 - BEM Notation para el maquetado  http://getbem.com/
@@ -54,7 +54,6 @@ Reportes de lighthouse:
 
 
 ## Mejoras posible de la entrega
-- CSS: generar compatibilidad de propiedades con autoprefix 
-- build por contenido
 - Server Side Rendering
-- preact como dependencia, sacar del build
+- CSS: generar compatibilidad de propiedades con autoprefix 
+- preact como dependencia, sacar de los builds
