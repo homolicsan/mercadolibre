@@ -53,7 +53,7 @@ Reportes de lighthouse:
 ![Details](/entrega/lighthouse/images/detail.png)
 
 
-## Mejoras posible de la entrega
+## Mejoras posibles de la entrega
 - Server Side Rendering
 - CSS: generar compatibilidad de propiedades con autoprefix 
 - preact como dependencia, sacar de los builds
