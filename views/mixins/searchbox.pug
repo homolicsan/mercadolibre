@@ -1,6 +1,7 @@
 mixin searchbox
-  form.col-9.searchbox(action='/items', method='get')
-    label.searchbox__label(for='q') buscar
-    // Si llego a implementar un autocomplete setear autocomplete en off
-    input.searchbox__input(type='text', name='q', id='q', placeholder='Nunca dejes de buscar', autocomplete='on')
-    input.searchbox__submit(type='submit', value='Buscar')
+  div#searchbox
+    form.col-9.searchbox(action='/items', method='get')
+      label.searchbox__label(for='q') buscar
+      // Si llego a implementar un autocomplete setear autocomplete en off
+      input.searchbox__input(type='text', name='q', id='q', placeholder='Nunca dejes de buscar', autocomplete='on')
+      input.searchbox__submit(type='submit', value='Buscar')
