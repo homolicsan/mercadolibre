@@ -2,8 +2,8 @@
 import { h, render, Component, Fragment } from 'preact';
 import { connect } from 'unistore/preact'
 
-import { actions } from './store/store'
-import {Item} from './components/Item'
+import { actions } from '../store/store'
+import {Item} from './Item'
 
 const showItemPerPage = (index, range_items) => {
   index = index + 1;
