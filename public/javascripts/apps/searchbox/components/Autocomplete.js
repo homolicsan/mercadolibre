@@ -3,14 +3,9 @@ import { h, render, Component, Fragment } from 'preact';
 import { connect } from 'unistore/preact'
 
 import { actions } from '../store/store'
-//import {Item} from './Item'
-
 
 export const Autocomplete = connect(['suggested_queries'], actions)(
-
 	({suggested_queries, sendForm}) => {
-
-   
 
   return (
     <Fragment>
