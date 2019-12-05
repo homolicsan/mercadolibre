@@ -8,10 +8,9 @@ No estaba en el requerimiento pero se agrego un Autocomplete
 
 ## Cómo Levantar la app
 
-`` 
-  npm install \n
-  npm run start
-``
+- npm install 
+- npm run start
+
 ## Estrategia
 
 - Los estáticos se cachean y gzipean
@@ -21,6 +20,7 @@ Y en la home se hace una prefech de los css y js del resultado de busqueda
 
 ## Se utilizo
 - BEM Notation para el maquetado  http://getbem.com/
+- PReact en vez de React para que las apps sean livianas
 
 ## Mejoras posible de la entrega
 - CSS: generar compatibilidad de propiedades con autoprefix 
@@ -28,7 +28,7 @@ Y en la home se hace una prefech de los css y js del resultado de busqueda
 - Server Side Rendering
 - preact como dependencia, sacar del build
 
-===
+====
 
 ## Lighthouse Audits
 
