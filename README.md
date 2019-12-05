@@ -40,7 +40,7 @@ Reportes de lighthouse:
 
 - [Index](/entrega/lighthouse/pdfs/index.pdf)
 - [Results](/entrega/lighthouse/pdfs/results.pdf)
-- [Details](/entrega/lighthouse/pdfs/details.pdf)
+- [Details](/entrega/lighthouse/pdfs/detail.pdf)
 
 ### Capturas
 #### Index
