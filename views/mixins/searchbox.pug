@@ -1,4 +1,5 @@
 mixin searchbox
   form.searchbox.col-9(action="/items", method="get")
-    input.searchbox__input(type="text" name="q")
+    label(for='q') buscar
+    input.searchbox__input(type="text" name="q" id='q')
     input.searchbox__submit(type="submit", value="Buscar")

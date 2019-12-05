@@ -1,10 +1,32 @@
 @import '_vars';
 
+
+/* Result Breadcrumb*/
 .result-breadcrumb {
-  font-size: 14px;
+  
   padding: 16px 0;
 }
+  .result-breadcrumb__item {
+    display: inline-block;
+    font-size: 14px;
+    color: $color3;
 
+    a {
+      color: $color3;
+    }
+
+    &:before{
+      content: '>';
+      padding: 0 6px;  
+    }
+
+    &:first-child:before {
+      content: ' ';
+      padding: 0;
+    }
+  }
+
+/* Result Items*/
 .result-item {
   display: flex;
   padding: 16px 0 16px 16px;
@@ -20,27 +42,35 @@
     .result-item__price {
       order: 1;
       font-size: 24px;
-      padding-bottom: 32px;
+      padding-top: 16px;
       color: $color1;
     }
 
     .result-item__title {
       order: 2;
       font-size: 18px;
-      
-      a {
-        color: $color2;
-      }
-    }
+      line-height: 22px;
 
-  .result-item__image {
+    }
+      .result-item__title-link {
+        color: $color1;
+        padding: 32px 0;
+        display: block;
+      }
+
+  .result-item__image-link{
     order: 1;
     width: 180px;
     height: 180px;
-    
-    border-radius: 4px;
-    margin-right: 16px;
-  }
+    display: block;
+  } 
+    .result-item__image {
+      width: 180px;
+      height: 180px;
+      
+      border-radius: 4px;
+      margin-right: 16px;
+    }
 
   .result-item__location {
     order: 3;
@@ -50,25 +80,54 @@
   }
 
 // Paginator
+.paginator_detail{
+  margin-top: 32px;
+  color: $color2;
+}
 .paginator {
   display: flex;
   flex-direction: row;
+  margin-top: 16px;
 }
   .paginator__page {
-    background: #ccc;
-    color: #3483fa;
-    padding: 5px;
-    border-radius: 4px;
+    color: $color2;
+    background: #d7dcff;
+    
+    margin-left: 10px;
+    border-radius: 5px;
     cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      background: $color3;
+      .paginator__page_link {
+        color: $color4;
+      }
+    }
+  }
+  .paginator__page_link {
+    color: $color2;
+    min-width: 35px;
+    box-sizing: border-box;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+    height: 35px;
+    display: inline-block;
   }
 
+  .paginator__page--current {
+    background: $color2;
+    color: $color4;
 
+    .paginator__page_link{
+      color: $color4
+    }
+  }
 
-
-
-  /*
-  #333333
-  #666666
-  #999999
-  #eeeeee
-  */
+  .paginator__page--hide {
+    display: none;
+  }

@@ -6,7 +6,7 @@ const BItem = connect(['categories'])(
 
 		categories.map((item, index) =>
 			<Fragment key={index} >
-			<li><a class='result-breadcrumb'> {item} </a></li>
+			<li class='result-breadcrumb__item'><a > {item} </a></li>
 			</Fragment>
 		)
 	)
@@ -15,9 +15,15 @@ const BItem = connect(['categories'])(
 export const Breadcrumb = () => (
   (
     <Fragment>
-      <ul class='result-breadcrumb'>
-        <BItem />
-      </ul>
+     
+      <div class='row'>
+        <div class='col-10 offset-1'>
+          <ul class='result-breadcrumb'>
+            <BItem />
+          </ul>
+        </div>
+      </div>
+      
     </Fragment>
   )
 )

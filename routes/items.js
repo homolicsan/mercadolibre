@@ -110,24 +110,26 @@ router.get('/:id', function(req, res, next) {
 
     // The whole response has been received. Print out the result.
     resp.on('end', () => {
-
       data = JSON.parse(data);
 
-      res.write(`<title>${data.item.title}</title>
+      res.write(`
+        <title>${data.item.title}</title>
+        <meta name='description' content='Mercadolibre descripcion, keyword1 keyword2 keyword3' />
       </head>
       <body>`)
 
       res.write(pug.renderFile('./views/detail_body.pug', data));
-      res.end('</body></html>');
+      res.end(`
+        </body>
+      </html>`);
 
     });
 
     }).on("error", (err) => {
-
-      res.end('</body></html>');
-       
+      res.end(`
+        </body>
+      </html>`);
     });
-
 
 });
 
