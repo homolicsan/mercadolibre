@@ -97,13 +97,13 @@
   order: 1;
   width: 180px;
   height: 180px;
-  display: block; }
+  display: block;
+  margin-right: 16px; }
 
 .result-item__image {
   width: 180px;
   height: 180px;
-  border-radius: 4px;
-  margin-right: 16px; }
+  border-radius: 4px; }
 
 .result-item__location {
   order: 3;
