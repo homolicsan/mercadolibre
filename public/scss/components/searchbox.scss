@@ -1,0 +1,58 @@
+
+/* */
+.searchbox {
+  background: $color4;
+  display: inline-block;
+  height: 33px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  display: flex;
+  overflow: hidden;
+
+}
+  .searchbox__label {
+    display: inline-block;
+    text-indent: -900px;
+  }
+
+  .searchbox__input {
+    width: 92%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    box-sizing: border-box;
+    color: $color3;
+  }
+
+  .searchbox__submit {
+    background: url('/images/ic_Search.png') 15px center no-repeat;
+    width: 46px;
+    height: 33px;
+    border: 0;
+    outline: 0;
+    text-indent: -2000px;
+    cursor: pointer;
+  }
+
+/* Comentado porque no tengo una pantalla retina para probarlo
+// Retina
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+
+  .searchbox__submit {
+    background: url('/images/ic_Search@2x.png'); 
+  }
+
+  .logo {
+    background: url('/images/Logo_ML@2x.png');
+  }
+
+}
+*/

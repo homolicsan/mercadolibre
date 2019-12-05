@@ -1,5 +1,3 @@
-
-
 (function(window){
   var urlParams = new URLSearchParams(window.location.search);
   var query = urlParams.get('q');

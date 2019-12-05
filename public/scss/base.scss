@@ -2,6 +2,8 @@
 @import '_reset';
 @import '_grid';
 
+@import 'components/searchbox';
+
 body {
   background: $background-color;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -15,7 +17,7 @@ a {
 // BEM Notation: http://getbem.com/
 
 .header{
-  padding-top: 20px;
+  padding: 8px 0;
   background: $main-color;
 }
 
@@ -25,54 +27,5 @@ a {
   height: 36px;
   text-indent: -2000px;
   display: inline-block;
+  background-size: 49px 33px;
 }
-
-/* */
-.searchbox {
-  background: $color4;
-  display: inline-block;
-  height: 38px;
-}
-  .searchbox__label {
-    display: inline-block;
-    text-indent: -900px;
-
-  }
-
-  .searchbox__input {
-    width: 92%;
-    height: 100%;
-    border: 0;
-    outline: 0;
-    box-sizing: border-box;
-  }
-
-  .searchbox__submit {
-    background: url('/images/ic_Search.png') top left no-repeat;
-    width: 46px;
-    height: 39px;
-    border: 0;
-    outline: 0;
-    text-indent: -2000px;
-  }
-
-/* Comentado porque no tengo una pantalla retina para probarlo
-// Retina
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) { 
-
-  .searchbox__submit {
-    background: url('/images/ic_Search@2x.png'); 
-  }
-
-  .logo {
-    background: url('/images/Logo_ML@2x.png');
-  }
-
-}
-*/
