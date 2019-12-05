@@ -4,6 +4,8 @@ import {Breadcrumb} from './components/Breadcrumb'
 import {Results} from './components/Results'
 import {Pagination} from './components/Pagination'
 
+import {load_resources} from './utils/load-resources'
+
 export class App extends Component {
 
   constructor(props, state) {
@@ -12,8 +14,8 @@ export class App extends Component {
     let ini_state = state.store.getState();
 
     let items_per_page = 4;
-    let last_page = Math.ceil(__STATE__.items.length / items_per_page);
     let total = ini_state.items.length;
+    let last_page = Math.ceil(total / items_per_page);
 
     ini_state = {      
         current_page   : 1,
@@ -32,6 +34,9 @@ export class App extends Component {
   }
   // Lifecycle: Called whenever our component is created
   componentDidMount() {
+    let images_resources = this.context.store.getState().items.slice(4, 8).map((item)=>item.picture);
+
+    setTimeout(()=>{load_resources( images_resources, 'image')}, 1000);
    
   }
 
@@ -45,7 +50,8 @@ export class App extends Component {
       <Fragment>
         <Breadcrumb />
         <Results />
-        <Pagination />    
+        <Pagination />
+        <div id='images-preload-container'></div>  
       </Fragment>
     );
   }

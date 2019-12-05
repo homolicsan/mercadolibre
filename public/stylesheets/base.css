@@ -274,6 +274,9 @@ only screen and (                min-resolution: 2dppx) {
 
 }
 */
+.hidde {
+  display: none; }
+
 body {
   background: #eeeeee;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
