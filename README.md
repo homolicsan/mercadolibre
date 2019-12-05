@@ -41,10 +41,12 @@ Y en la home se hace una prefech de los css y js del resultado de busqueda
 
 [Details](/entrega/lighthouse/pdfs/details.pdf)
 
-### Captures
-
+### Capturas
+- *Index*
 ![Index](/entrega/lighthouse/images/index.png)
 
+- *Results*
 ![Results](/entrega/lighthouse/images/results.png)
 
-![Details](/entrega/lighthouse/images/details.png)
+- *Details*
+![Details](/entrega/lighthouse/images/detail.png)
