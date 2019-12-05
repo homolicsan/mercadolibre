@@ -57,6 +57,17 @@ let sassConfigResult = Object.assign({}, sassConfig, {
   ]
 });
 
+
+let sassConfigResultSeo = Object.assign({}, sassConfig, {
+  entry: './public/scss/results-seo.js',
+  plugins: [
+    new MiniCSSExtractPlugin({
+      filename: "results-seo.css",
+      
+    })
+  ]
+});
+
 let sassConfigHome = Object.assign({}, sassConfig, {
   entry: './public/scss/home.js',
   plugins: [
@@ -95,6 +106,7 @@ module.exports = [
   sassConfigResult,
   sassConfigDetail,
   sassConfigBase,
-  sassConfigHome
+  sassConfigHome,
+  sassConfigResultSeo
 
   ]

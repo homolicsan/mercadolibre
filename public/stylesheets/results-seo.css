@@ -1,0 +1,26 @@
+/* Breadcrumb*/
+.breadcrumb {
+  padding: 16px 0; }
+
+.breadcrumb__item {
+  display: inline-block;
+  font-size: 14px;
+  color: #999999; }
+  .breadcrumb__item a {
+    color: #999999; }
+  .breadcrumb__item:before {
+    content: '>';
+    padding: 0 6px; }
+  .breadcrumb__item:first-child:before {
+    content: ' ';
+    padding: 0; }
+
+.paginator__page_link {
+  min-width: 35px;
+  height: 35px;
+  box-sizing: border-box;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block; }
+

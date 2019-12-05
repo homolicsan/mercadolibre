@@ -1,0 +1,14 @@
+@import '_vars';
+
+@import 'components/breadcrumb.scss';
+
+.paginator__page_link {
+  min-width: 35px;
+  height: 35px;
+  box-sizing: border-box;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+}
+

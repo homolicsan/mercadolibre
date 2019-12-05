@@ -1,19 +1,70 @@
-/* Result Breadcrumb*/
-.result-breadcrumb {
+/* Breadcrumb*/
+.breadcrumb {
   padding: 16px 0; }
 
-.result-breadcrumb__item {
+.breadcrumb__item {
   display: inline-block;
   font-size: 14px;
   color: #999999; }
-  .result-breadcrumb__item a {
+  .breadcrumb__item a {
     color: #999999; }
-  .result-breadcrumb__item:before {
+  .breadcrumb__item:before {
     content: '>';
     padding: 0 6px; }
-  .result-breadcrumb__item:first-child:before {
+  .breadcrumb__item:first-child:before {
     content: ' ';
     padding: 0; }
+
+/* Paginator */
+.paginator_detail {
+  margin-top: 32px;
+  color: #666666; }
+
+.paginator {
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px; }
+
+.paginator__page {
+  color: #666666;
+  background: #d7dcff;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer; }
+  .paginator__page:first-child {
+    margin-left: 0; }
+  .paginator__page:hover {
+    background: #999999; }
+    .paginator__page:hover .paginator__page_link {
+      color: #eeeeee; }
+
+.paginator__page_link {
+  color: #666666;
+  min-width: 35px;
+  height: 35px;
+  box-sizing: border-box;
+  padding: 10px;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block; }
+
+.paginator__page--current {
+  background: #666666;
+  color: #eeeeee; }
+  .paginator__page--current .paginator__page_link {
+    color: #eeeeee; }
+
+.paginator__page--hide {
+  display: none; }
+
+@media only screen and (max-width: 400px) {
+  .paginator__page {
+    display: none; }
+  .paginator__previous-next,
+  .paginator__page--previous-current,
+  .paginator__page--current,
+  .paginator__page--current + .paginator__page {
+    display: inline-block; } }
 
 /* Result Items*/
 .result-item {
@@ -60,44 +111,15 @@
   padding-top: 24px;
   color: #999999; }
 
-.paginator_detail {
-  margin-top: 32px;
-  color: #666666; }
-
-.paginator {
-  display: flex;
-  flex-direction: row;
-  margin-top: 16px; }
-
-.paginator__page {
-  color: #666666;
-  background: #d7dcff;
-  margin-left: 10px;
-  border-radius: 5px;
-  cursor: pointer; }
-  .paginator__page:first-child {
-    margin-left: 0; }
-  .paginator__page:hover {
-    background: #999999; }
-    .paginator__page:hover .paginator__page_link {
-      color: #eeeeee; }
-
-.paginator__page_link {
-  color: #666666;
-  min-width: 35px;
-  box-sizing: border-box;
-  padding: 10px;
-  vertical-align: middle;
-  text-align: center;
-  height: 35px;
-  display: inline-block; }
-
-.paginator__page--current {
-  background: #666666;
-  color: #eeeeee; }
-  .paginator__page--current .paginator__page_link {
-    color: #eeeeee; }
-
-.paginator__page--hide {
-  display: none; }
+@media only screen and (max-width: 400px) {
+  #app .row {
+    border-top: 1px solid #999999; }
+    #app .row:nth-child(1), #app .row:nth-child(2), #app .row:last-child {
+      border-top: none; }
+  .result-item {
+    padding-bottom: 0; }
+  body .row .result-item__location {
+    margin-top: -230px; }
+  .result-item__title-link {
+    padding: 16px 0; } }
 

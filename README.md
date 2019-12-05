@@ -21,4 +21,11 @@ Y en la home se hace una prefech de los css y js del resultado de busqueda
 
 - En resultados de busqueda se hace un prefech los css y js del detalle del producto
 
+# Se utilizo
+- BEM Notation para el maquetado  http://getbem.com/
 
+# Mejoras sobre pa entrega
+- CSS: generar compatibilidad de propiedades con autoprefix 
+- build por contenido
+- Server Side Rendering
+- preact como dependencia, sacar del build
